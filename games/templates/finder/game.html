@@ -1,0 +1,10 @@
+{% extends 'gametemplate.html' %}
+{% load static %}
+
+{% block game %}
+    <input type="range" id="speed" min="1" max="15" value="5"></input>
+    <input type="button" id="stop" value="Continue"></input>
+    <input type="button" id="reset" value="Reset"></input>
+    <script src="{% static 'finder/grid.js' %}"></script>
+    <script src="{% static 'finder/finderscript.js' %}"></script>
+{% endblock %}

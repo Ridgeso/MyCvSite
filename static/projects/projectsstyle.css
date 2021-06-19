@@ -1,0 +1,57 @@
+/* ^^^ Build In Globals ^^^ */
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ^^^ Main Block ^^^ */
+.main-block {
+    position: relative;
+    justify-content: center;
+    border: solid #AEADF0 6px;
+}
+
+/* ^^^ Projects ^^^ */
+.project-link {
+    display: grid;
+    margin-bottom: 128px;
+}
+
+.project-link:last-child {
+    margin: 0px;
+}
+
+.project-block {
+    position: relative;
+    display: flex;
+    background: #011627;
+    width: auto;
+    height: auto;
+}
+
+.project-block img {
+    max-height: 256px;
+    object-fit: cover;
+}
+
+.readme {
+    width: 100%;    
+}
+
+.readme h2 {
+    color: #AEADF0;
+    padding: 16px;
+    margin: 0px 16px;
+    height: 15%;
+    font-size: 32px;
+    text-align: center;
+}
+
+.readme p {
+    margin: 0px;
+    padding: 16px;
+    height: 60%;
+    text-align: justify;
+    color: #FCFAEF;
+}

@@ -1,0 +1,11 @@
+# init
+**/__init__.py
+
+# pycache
+**/__pycache__/
+
+# migrations
+**/migrations/
+
+# tests
+**/tests.py

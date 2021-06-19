@@ -1,0 +1,60 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'projects/projectsstyle.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+    {% comment %} <!-- Main Site Content --> {% endcomment %}
+    <div class="main-block">
+        <h1>My whole work</h1>
+        {% comment %} <!-- Projects List --> {% endcomment %}
+        {% for link in projects %}
+        {% if link.name != "Ridgeso" %}
+        <a href="{{ link.link }}" class="project-link" target="_blank">
+            <div class="project-block">
+                {% if forloop.counter0|divisibleby:2 %}
+                <img src="{% static link.img %}" alt="{{link.img_info}}">
+                <div class="readme">
+                    <h2>{{ link.name }}</h2>
+                    <p>{{ link.text }}</p>
+                </div>
+                {% else %}
+                <div class="readme">
+                    <h2>{{ link.name }}</h2>
+                    <p>{{ link.text }}</p>
+                </div>
+                <img src="{% static link.img %}" alt="{{link.img_info}}">
+                {% endif %}
+            </div>
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    {% comment %} <!-- Inner Projects --> {% endcomment %}
+    <div class="main-block">
+        <h1>My build in projects</h1>
+        {% comment %} <!-- Inner Links --> {% endcomment %}
+        {% for project in inner %}
+        <a href="{{ project.get_absolute_url }}" class="project-link">
+            <div class="project-block">
+                {% if forloop.counter0|divisibleby:2 %}
+                <img src="{% static project.image_path %}" alt="Snake game">
+                <div class="readme">
+                    <h2>{{ project.title }}</h2>
+                    <p>{{ project.description }}</p>
+                </div>
+                {% else %}
+                <div class="readme">
+                    <h2>{{ project.title }}</h2>
+                    <p>{{ project.description }}</p>
+                </div>
+                <img src="{% static project.image_path %}" alt="Snake game">
+                {% endif %}
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+{% endblock %}

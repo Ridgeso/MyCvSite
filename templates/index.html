@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl-PL en-US">
+{% comment %} <!-- HEAD OF THE SITE --> {% endcomment %}
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'basestyle.css' %}" type="text/css">
+    <script src="{% static 'basescript.js'%}"></script>
+    {% block header %}
+    {% endblock %}
+
+    <title>{{ name }}</title>
+
+</head>
+{% comment %} <!-- BODY OF THE SITE --> {% endcomment %}
+<body>
+    
+    {% comment %} <!-- Top Bar --> {% endcomment %}
+    <div id="top-bar">
+        <nav>
+            <a href="/"><img class="logo" src="{% static 'logo.png' %}" alt="Logo"></a>
+            <ul class="links">
+                <li><a href="/about/">About Me</a></li>
+                <li><a href="/projects/">My Projects</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    {% comment %} <!-- Main Block --> {% endcomment %}
+    {% block content %}
+
+    {% endblock %}
+
+    {% comment %} <!-- Bottom Bar --> {% endcomment %}
+    <div id="bottom-bar">
+
+        {% comment %} <!-- Informations --> {% endcomment %}
+        <div class="info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, qui!</p>
+        </div>
+
+        {% comment %} <!-- A little more info --> {% endcomment %}
+        <div class="rest">
+            <ul>
+                <li>Contact</li>
+                <li>Phone number: 123456789</li>
+                <li>email: random123@email.com</li>
+            </ul>
+        </div>
+
+    </div>
+
+    {% comment %} <div class="scroll"><a href="#"><img src="{% static 'up1.png' %}" alt="Scroll button"></a></div> {% endcomment %}
+    <div id="scroll"><img src="{% static 'arrowup.png' %}" alt="Scroll button"></div>
+
+</body>
+</html>

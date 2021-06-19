@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'contact/contactstyle.css' %}" type="text/css">
+    <script src="{% static 'contact/submit.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div id="input-form">
+        <form method="POST" id="my-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="buttons">
+                <input type="submit" value="Submit" class="btn" onClick="thanks()">
+                <input type="button" value="Reset" class="btn" onClick="this.form.reset()">
+            </div>
+        </form>
+    </div>
+{% endblock %}

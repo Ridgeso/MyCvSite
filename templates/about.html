@@ -1,0 +1,72 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'about/aboutstyle.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+    {% comment %} <!-- Block --> {% endcomment %}
+    <div class="about">
+
+        {% comment %} <!-- First Info --> {% endcomment %}
+        <div class="my-past page-1 picture">
+            <img src="{% static 'about/pythonlogo.png' %}" alt="Python Logo">
+            <h1>Where I started</h1>
+        </div>
+        <div class="my-past content-1 picture">
+            <p class="my-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia cumque corporis rem
+                voluptatibus vitae libero aperiam magni earum laudantium praesentium ad porro ratione, dolorum,
+                eius illo dolore recusandae eos? Eligendi, asperiores ipsa ipsam, repellendus quis reprehenderit magnam doloribus, deserunt saepe
+                necessitatibus adipisci suscipit nulla ducimus eaque totam voluptas voluptatibus veniam
+            </p>
+        </div>
+        
+        {% comment %} <!-- Second Info --> {% endcomment %}
+        <div class="my-past page-2 picture">
+            <img src="{% static 'about/htmllogo.png' %}" alt="Python Logo">
+            <h1>First struggles</h1>
+        </div>
+        <div class="my-past content-2 picture">
+            <p class="my-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia cumque corporis rem
+                voluptatibus vitae libero aperiam magni earum laudantium praesentium ad porro ratione, dolorum,
+                eius illo dolore recusandae eos? Eligendi, asperiores ipsa ipsam, repellendus quis reprehenderit magnam doloribus, deserunt saepe
+                necessitatibus adipisci suscipit nulla ducimus eaque totam voluptas voluptatibus veniam
+            </p>
+        </div>
+
+        {% comment %} <!-- Third Info --> {% endcomment %}
+        <div class="my-past page-3 picture">
+            <img src="{% static 'about/clogo.png' %}" alt="Python Logo">
+            <h1>All my knowledge</h1>
+        </div>
+        <div class="my-past content-3 picture">
+            <p class="my-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia cumque corporis rem
+                voluptatibus vitae libero aperiam magni earum laudantium praesentium ad porro ratione, dolorum,
+            </p>
+            <h3>My Skills</h3>
+            <div class="my-skills">
+                {% comment %} <span>Python</span> {% endcomment %}
+                <div class="lang">
+                    <span class="python">Python</span>
+                </div>
+                <div class="lang">
+                    <span class="sql">SQL</span>
+                </div>
+                <div class="lang">
+                    <span class="cpp">C/C++</span>
+                </div>
+                <div class="lang">
+                    <span class="html">HTML5</span>
+                </div>
+                <div class="lang">
+                    <span class="office">Excel/Access</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

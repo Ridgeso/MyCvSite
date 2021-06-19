@@ -1,0 +1,119 @@
+/* ^^^ about ^^^ */
+.my-text {
+    padding: 64px;
+    font-size: 32px;
+    color: #FAFCFA;
+    text-align: justify;
+}
+
+.about img {
+    width: 256px;
+    padding: 0px 32px;
+    align-items: center;
+}
+
+/* ^^^ My Past 1 ^^^ */
+.page-1 {
+    background: url("./space.jpeg");
+}
+
+.content-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./space.jpeg");
+}
+
+/* ^^^ My Past 2 ^^^ */
+.page-2 {
+    background: url("./inspiration.jpeg");
+}
+
+.content-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./inspiration.jpeg");
+}
+
+/* ^^^ My Past 3 ^^^ */
+.page-3 {
+    background: url("./code2.jpeg");
+}
+
+.content-3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./code2.jpeg");
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page-3 img {
+    filter: hue-rotate(300deg);
+}
+
+/* - Skills Levels - */
+h3 {
+    color: #FF8811;
+    font-size: 64px;
+    margin: 0px
+}
+
+.my-skills {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: block;
+    padding: 32px;
+    margin: 32px;
+}
+
+.lang {
+    position: relative;
+    display: block;
+    height: 20%; /* <- Change this when add new skill */
+    border-bottom: solid 6px #AEADF063;    
+}
+
+.lang span {
+    position: absolute;
+    bottom: -6px;
+    font-size: 28px;
+    /* border-bottom: solid 6px #AEADF0;     */
+    border-bottom: solid 6px #FF8811;    
+}
+
+.python {
+    width: 50%;
+}
+
+.sql {
+    width: 10%;
+}
+
+.cpp {
+    width: 15%;
+}
+
+.html {
+    width: 20%;
+}
+
+.office {
+    width: 60%;
+}
+
+/* All componets */
+.my-past {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.picture {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@media screen and (max-width: 877px) {
+    .my-past {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
