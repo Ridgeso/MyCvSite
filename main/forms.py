@@ -43,6 +43,7 @@ class ContactModelForm(forms.ModelForm):
             }
         )
     )
+
     class Meta:
         model = MessagesModel
         fields = ["name", "email", "title", "message"]

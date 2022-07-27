@@ -9,7 +9,7 @@ class Links:
     README_LEN = 300
     link_set = []
 
-    def __init__(self, name, link, text) -> None:
+    def __init__(self, name: str, link: str, text: str) -> None:
         self.name = name
         self.link = link
         if text != "...":
@@ -21,7 +21,7 @@ class Links:
         self.img_info = img_val[1]
 
     @staticmethod
-    def get_readme(path) -> str:
+    def get_readme(path: str) -> str:
         code = urlopen(path).read()
 
         soup = BeautifulSoup(code, "html.parser")
@@ -35,7 +35,7 @@ class Links:
                     if readme_len + len(word) < Links.README_LEN:
                         readme += " " + word
                         readme_len += 1+len(word)
-        return readme+"..."
+        return "..."
     
     @classmethod
     def get_urls(cls) -> None:
@@ -55,7 +55,7 @@ class Links:
                 text=rep_text
             ))
 
-    def get_img(self) -> str:
+    def get_img(self) -> tuple[str, str]:
         img_list = os.listdir(os.path.join("static", "projects"))
         
         for img in img_list:
@@ -63,6 +63,5 @@ class Links:
                 return img, self.name
         return "", "Image cannot be found "
 
-    
     def __repr__(self) -> str:
         return f"{self.name} : {self.link}\n{self.text}\n"

@@ -1,3 +1,5 @@
+from typing import Type
+
 from io import SEEK_CUR
 from django.shortcuts import render
 import os
@@ -5,7 +7,10 @@ import os
 from main.models import PageInfo
 # Create your views here.
 
-def game_view(request, url):
+WSGIRequest = Type['WSGIRequest']
+
+
+def game_view(request: WSGIRequest, url: str):
     obj = PageInfo.objects.get(page_name=url)
     context = {
         "name": obj.title

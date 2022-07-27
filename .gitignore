@@ -9,3 +9,11 @@
 
 # tests
 **/tests.py
+
+# env
+**/djangoenv
+
+# pass
+secure.txt
+
+/.idea

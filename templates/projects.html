@@ -41,7 +41,7 @@
         <a href="{{ project.get_absolute_url }}" class="project-link">
             <div class="project-block">
                 {% if forloop.counter0|divisibleby:2 %}
-                <img src="{% static project.image_path %}" alt="Snake game">
+                <img src="{% static project.image_path %}" alt="{{ project.title }}">
                 <div class="readme">
                     <h2>{{ project.title }}</h2>
                     <p>{{ project.description }}</p>
@@ -51,7 +51,7 @@
                     <h2>{{ project.title }}</h2>
                     <p>{{ project.description }}</p>
                 </div>
-                <img src="{% static project.image_path %}" alt="Snake game">
+                <img src="{% static project.image_path %}" alt="{{ project.title }}">
                 {% endif %}
             </div>
         </a>

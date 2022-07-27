@@ -1,3 +1,5 @@
+from typing import Type
+
 from django import forms
 from django.forms.models import ModelForm
 from django.shortcuts import render, HttpResponseRedirect
@@ -9,8 +11,10 @@ from .forms import ContactModelForm
 from .web import Links
 Links.get_urls()
 
+WSGIRequest = Type['WSGIRequest']
 
-def main_views(request):
+
+def main_views(request: WSGIRequest) -> HttpResponseRedirect:
     obj = PageInfo.objects.get(page_name="main")
     context = {
         "name": obj.title
@@ -18,7 +22,7 @@ def main_views(request):
     return render(request, "main.html", context)
 
 
-def about_views(request):
+def about_views(request: WSGIRequest) -> HttpResponseRedirect:
     obj = PageInfo.objects.get(page_name="about")
     context = {
         "name": obj.title
@@ -26,7 +30,7 @@ def about_views(request):
     return render(request, "about.html", context)
 
 
-def projects_views(request):
+def projects_views(request: WSGIRequest) -> HttpResponseRedirect:
     obj = PageInfo.objects.get(page_name="projects")
     inner = InnerGameModel.objects.all()
     context = {
@@ -37,7 +41,7 @@ def projects_views(request):
     return render(request, "projects.html", context)
 
 
-def contact_views(request):
+def contact_views(request: WSGIRequest) -> HttpResponseRedirect:
     obj = PageInfo.objects.get(page_name="contact")
     form = ContactModelForm(request.POST or None)
     if form.is_valid():
