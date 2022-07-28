@@ -1,24 +1,73 @@
 /* ^^^ about ^^^ */
+#about {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #0F0F0F;
+}
+
+/* All componets */
+.my-past {
+    display: flex;
+    position:relative;
+    
+    width: 700px;
+    height: 400px;
+    padding: 10px;
+    margin: 40px 30px;
+    
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 64px;
+    box-shadow: 25px 25px 40px -15px #13950C;
+    transition: all 0.2s ease-out;
+}
+
+.my-past:hover {
+    box-shadow: 0px 0px 40px 10px #13950C, 0px 0px 20px 5px #13950C inset;
+    transform: scale(1.01);
+}
+
+.picture {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@media screen and (max-width: 877px) {
+    .my-past {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
 .my-text {
     padding: 64px;
     font-size: 32px;
-    color: #FAFCFA;
+    color: #FCFAFE;
     text-align: justify;
 }
 
-.about img {
-    width: 256px;
+#about img {
+    width: 130px;
     padding: 0px 32px;
     align-items: center;
 }
 
 /* ^^^ My Past 1 ^^^ */
+.page {
+    background-color: #13131d;
+}
+
 .page-1 {
     background: url("./space.jpeg");
 }
 
 .content-1 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./space.jpeg");
+    background: linear-gradient(#00000080, #00000080), url("./space.jpeg");
 }
 
 /* ^^^ My Past 2 ^^^ */
@@ -27,7 +76,7 @@
 }
 
 .content-2 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./inspiration.jpeg");
+    background: linear-gradient(#00000080, #00000080), url("./inspiration.jpeg");
 }
 
 /* ^^^ My Past 3 ^^^ */
@@ -36,7 +85,7 @@
 }
 
 .content-3 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./code2.jpeg");
+    background: linear-gradient(#00000080, #00000080), url("./code2.jpeg");
     display: flex;
     flex-wrap: wrap;
 }
@@ -47,33 +96,36 @@
 
 /* - Skills Levels - */
 h3 {
-    color: #FF8811;
+    color: #F71735;
     font-size: 64px;
     margin: 0px
 }
 
 .my-skills {
-    position: relative;
-    width: 100%;
-    height: 400px;
     display: block;
-    padding: 32px;
-    margin: 32px;
+    position: relative;
+    
+    width: 100%;
+    
+    padding: 0px;
+    margin: 0px;
 }
 
 .lang {
     position: relative;
     display: block;
-    height: 20%; /* <- Change this when add new skill */
+
+    padding: 0px;
+    margin-bottom: 40px;
+    
     border-bottom: solid 6px #AEADF063;    
 }
 
 .lang span {
     position: absolute;
     bottom: -6px;
-    font-size: 28px;
-    /* border-bottom: solid 6px #AEADF0;     */
-    border-bottom: solid 6px #FF8811;    
+    font-size: 28px;    
+    border-bottom: solid 6px #F71735;    
 }
 
 .python {
@@ -94,26 +146,4 @@ h3 {
 
 .office {
     width: 60%;
-}
-
-/* All componets */
-.my-past {
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-}
-
-.picture {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-@media screen and (max-width: 877px) {
-    .my-past {
-        display: flex;
-        flex-wrap: wrap;
-    }
 }

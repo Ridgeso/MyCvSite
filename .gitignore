@@ -16,4 +16,8 @@
 # pass
 secure.txt
 
+# IDE
 /.idea
+
+#files
+/static/colors*.png

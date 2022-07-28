@@ -7,10 +7,10 @@
 
 {% block content %}
     {% comment %} <!-- Block --> {% endcomment %}
-    <div class="about">
+    <div id="about">
 
         {% comment %} <!-- First Info --> {% endcomment %}
-        <div class="my-past page-1 picture">
+        <div class="my-past page picture">
             <img src="{% static 'about/pythonlogo.png' %}" alt="Python Logo">
             <h1>Where I started</h1>
         </div>
@@ -43,29 +43,14 @@
             <h1>All my knowledge</h1>
         </div>
         <div class="my-past content-3 picture">
-            <p class="my-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia cumque corporis rem
-                voluptatibus vitae libero aperiam magni earum laudantium praesentium ad porro ratione, dolorum,
-            </p>
             <h3>My Skills</h3>
-            <div class="my-skills">
-                {% comment %} <span>Python</span> {% endcomment %}
-                <div class="lang">
-                    <span class="python">Python</span>
-                </div>
-                <div class="lang">
-                    <span class="sql">SQL</span>
-                </div>
-                <div class="lang">
-                    <span class="cpp">C/C++</span>
-                </div>
-                <div class="lang">
-                    <span class="html">HTML5</span>
-                </div>
-                <div class="lang">
-                    <span class="office">Excel/Access</span>
-                </div>
-            </div>
+            <ul class="my-skills">
+                <li class="lang"><span class="python">Python</span></li>
+                <li class="lang"><span class="sql">SQL</span></li>
+                <li class="lang"><span class="cpp">C/C++</span></li>
+                <li class="lang"><span class="html">HTML</span></li>
+                <li class="lang"><span class="office">Excel/Access</span></li>
+            </ul>
         </div>
 
     </div>

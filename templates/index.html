@@ -22,18 +22,20 @@
         <nav>
             <a href="/"><img class="logo" src="{% static 'logo.png' %}" alt="Logo"></a>
             <ul class="links">
-                <li><a href="/about/">About Me</a></li>
-                <li><a href="/projects/">My Projects</a></li>
-                <li><a href="/contact/">Contact</a></li>
+                <li><a href="/about/"><span>About Me</span></a></li>
+                <li><a href="/projects/"><span>My Projects</span></a></li>
+                <li><a href="/contact/"><span>Contact</span></a></li>
             </ul>
         </nav>
     </div>
+    <hr class="top-line">
 
     {% comment %} <!-- Main Block --> {% endcomment %}
     {% block content %}
 
     {% endblock %}
 
+    <hr class="bottom-line">
     {% comment %} <!-- Bottom Bar --> {% endcomment %}
     <div id="bottom-bar">
 
