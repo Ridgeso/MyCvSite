@@ -88,7 +88,6 @@ h1 {
 
 a {
     text-decoration: none;
-    /* color: #011627; */
     color: #7E158E;
     transition-duration: 0.25s;
     -o-transition-duration: 0.25s;
@@ -97,8 +96,7 @@ a {
 }
 
 a:hover {
-    /* color: #03335A; */
-    color: #7E158E;
+    color: #b213ca;
 }
 
 hr.top-line {

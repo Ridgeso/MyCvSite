@@ -21,12 +21,29 @@
     justify-content: center;
 
     border-radius: 64px;
-    box-shadow: 25px 25px 40px -15px #13950C;
+    box-shadow:
+    5px 1px 0px 0px #08080ea9,
+    10px 10px 0px 0px #08080ea9,
+    15px 15px 0px 0px #08080ea9,
+    20px 20px 0px 0px #08080ea9,
+    25px 25px 0px 0px #08080ea9,
+    25px 25px 0px 0px #08080ea9,
+    25px 25px 0px 0px #08080ea9,
+    30px 30px 50px -20px #13950C;
     transition: all 0.2s ease-out;
 }
 
 .my-past:hover {
-    box-shadow: 0px 0px 40px 10px #13950C, 0px 0px 20px 5px #13950C inset;
+    box-shadow: 
+    5px 1px 0px 0px #08080ea9,
+    10px 10px 0px 0px #08080ea9,
+    15px 15px 0px 0px #08080ea9,
+    20px 20px 0px 0px #08080ea9,
+    25px 25px 0px 0px #08080ea9,
+    25px 25px 0px 0px #08080ea9,
+    25px 25px 0px 0px #08080ea9,
+    30px 30px 50px 0px #13950C,
+    0px 0px 10px 5px #13950C inset;
     transform: scale(1.01);
 }
 
@@ -59,7 +76,7 @@
 
 /* ^^^ My Past 1 ^^^ */
 .page {
-    background-color: #13131d;
+    background-color: #13131D;
 }
 
 .page-1 {
