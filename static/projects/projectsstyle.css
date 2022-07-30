@@ -1,48 +1,65 @@
-/* ^^^ Build In Globals ^^^ */
-h1 {
-    display: flex;
-    justify-content: center;
-}
-
-
 /* ^^^ Main Block ^^^ */
 .main-block {
-    position: relative;
-    justify-content: center;
-    border: solid #AEADF0 6px;
+    display: grid;
+
+    justify-items: center;
 }
 
 /* ^^^ Projects ^^^ */
 .project-link {
-    display: grid;
-    margin-bottom: 128px;
-}
-
-.project-link:last-child {
-    margin: 0px;
-}
-
-.project-block {
-    position: relative;
     display: flex;
-    background: #011627;
-    width: auto;
-    height: auto;
+    margin-bottom: 128px;
+
+    width: 740px;
+    height: 420px;
+
+    background: #353535;
+    border-radius: 64px;
+    box-shadow: 7px 7px 10px 9px #000000;
+    transition: all 0.2s ease-out;
 }
 
-.project-block img {
-    max-height: 256px;
+.project-link:hover {
+    box-shadow: 7px 7px 25px 9px #000000;
+    transform: scale(1.01);
+}
+
+/* ^^^ Image ^^^ */
+.project-link img {
+    position: relative;
+    width: 256px;
+    height: 256px;
+    top: calc(50% - 256px/2);
+
     object-fit: cover;
+    
+    transition: all 0.2s ease-in-out;
+}
+.project-link img.left { border-radius: 64px 0px  0px 64px; right: 64px; }
+.project-link img.right { border-radius:  0px 64px 64px 0px; left: 64px; }
+
+
+.project-link:hover img {
+    transform: scale(1.05);
 }
 
+.project-link:hover img.left  {
+    right: 80px;
+}
+
+.project-link:hover img.right {
+    left : 80px;
+}
+
+/* ^^^ ReadMe ^^^ */
 .readme {
     width: 100%;    
 }
 
 .readme h2 {
-    color: #AEADF0;
-    padding: 16px;
-    margin: 0px 16px;
+    color: #F71735;
+    padding: 32px;
+    margin: 0px;
     height: 15%;
     font-size: 32px;
     text-align: center;
@@ -54,4 +71,5 @@ h1 {
     height: 60%;
     text-align: justify;
     color: #FCFAEF;
+    line-height: 20px;
 }

@@ -19,23 +19,18 @@
     
     {% comment %} <!-- Top Bar --> {% endcomment %}
     <div id="top-bar">
-        <nav>
-            <a href="/"><img class="logo" src="{% static 'logo.png' %}" alt="Logo"></a>
-            <ul class="links">
-                <li><a href="/about/"><span>About Me</span></a></li>
-                <li><a href="/projects/"><span>My Projects</span></a></li>
-                <li><a href="/contact/"><span>Contact</span></a></li>
-            </ul>
-        </nav>
+        <ul class="links">
+            <li><a href="/about/"><span>About Me</span></a></li>
+            <li><a href="/projects/"><span>My Projects</span></a></li>
+            <li><a href="/contact/"><span>Contact</span></a></li>
+        </ul>
     </div>
-    <hr class="top-line">
 
     {% comment %} <!-- Main Block --> {% endcomment %}
     {% block content %}
 
     {% endblock %}
 
-    <hr class="bottom-line">
     {% comment %} <!-- Bottom Bar --> {% endcomment %}
     <div id="bottom-bar">
 
@@ -55,7 +50,6 @@
 
     </div>
 
-    {% comment %} <div class="scroll"><a href="#"><img src="{% static 'up1.png' %}" alt="Scroll button"></a></div> {% endcomment %}
     <div id="scroll"><img src="{% static 'arrowup.png' %}" alt="Scroll button"></div>
 
 </body>

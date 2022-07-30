@@ -1,18 +1,27 @@
 /* ^^^ Introduction Picture ^^^ */
 #introduction {
     min-height: 100vh;
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
 
     background: url("./code.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-position: center;
     background-attachment: fixed;
 }
 
+#introduction h1 {
+    display: flex;
+    
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Square Peg', cursive;
+    font-size: 12em;
+    background: #000D;
+}
 
 /* ^^^ Main Block ^^^ */
 #main-block {
@@ -21,7 +30,7 @@
     flex-wrap: wrap;
     justify-content:center;
 
-    background: #0F0F0F;
+    /* background: #0F0F0F; */
 
     padding: 220px 0px;
 }
@@ -38,35 +47,16 @@
     background-size: cover;
 
     border-radius: 64px;
-    box-shadow:
-    -5px 1px 0px 0px #08080ea9,
-    -10px 10px 0px 0px #08080ea9,
-    -15px 15px 0px 0px #08080ea9,
-    -20px 20px 0px 0px #08080ea9,
-    -25px 25px 0px 0px #08080ea9,
-    -25px 25px 0px 0px #08080ea9,
-    -25px 25px 0px 0px #08080ea9,
-    -30px 30px 50px -20px #13950C;
+    box-shadow: -7px 7px 10px 9px #000000;
+    
 
     transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -webkit-transition: all 0.2s ease-out;
 
     font-size: 92px;
 }
 
 .content-box:hover {
-    box-shadow:
-    -5px 1px 0px 0px #08080ea9,
-    -10px 10px 0px 0px #08080ea9,
-    -15px 15px 0px 0px #08080ea9,
-    -20px 20px 0px 0px #08080ea9,
-    -25px 25px 0px 0px #08080ea9,
-    -25px 25px 0px 0px #08080ea9,
-    -25px 25px 0px 0px #08080ea9,
-    -30px 30px 50px 0px #13950C,
-    0px 0px 10px 5px #13950C inset;
+    box-shadow: -7px 7px 25px 9px #000000;
     transform: scale(1.01);
 }
 
@@ -82,4 +72,5 @@
 
 .content-box > a > span {
     align-self: center;
+    font-size: 0.5em;
 }

@@ -61,7 +61,7 @@ class Links:
         for img in img_list:
             if self.name in img:
                 return img, self.name
-        return "", "Image cannot be found "
+        return "Menager.jpeg", "Image cannot be found "
 
     def __repr__(self) -> str:
         return f"{self.name} : {self.link}\n{self.text}\n"

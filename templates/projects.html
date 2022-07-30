@@ -13,21 +13,19 @@
         {% for link in projects %}
         {% if link.name != "Ridgeso" %}
         <a href="{{ link.link }}" class="project-link" target="_blank">
-            <div class="project-block">
-                {% if forloop.counter0|divisibleby:2 %}
-                <img src="{% static link.img %}" alt="{{link.img_info}}">
-                <div class="readme">
-                    <h2>{{ link.name }}</h2>
-                    <p>{{ link.text }}</p>
-                </div>
-                {% else %}
-                <div class="readme">
-                    <h2>{{ link.name }}</h2>
-                    <p>{{ link.text }}</p>
-                </div>
-                <img src="{% static link.img %}" alt="{{link.img_info}}">
-                {% endif %}
+            {% if forloop.counter0|divisibleby:2 %}
+            <img src="{% static link.img %}" alt="{{link.img_info}}" class="left">
+            <div class="readme">
+                <h2>{{ link.name }}</h2>
+                <p>{{ link.text }}</p>
             </div>
+            {% else %}
+            <div class="readme">
+                <h2>{{ link.name }}</h2>
+                <p>{{ link.text }}</p>
+            </div>
+            <img src="{% static link.img %}" alt="{{link.img_info}}" class="right">
+            {% endif %}
         </a>
         {% endif %}
         {% endfor %}
@@ -39,21 +37,19 @@
         {% comment %} <!-- Inner Links --> {% endcomment %}
         {% for project in inner %}
         <a href="{{ project.get_absolute_url }}" class="project-link">
-            <div class="project-block">
-                {% if forloop.counter0|divisibleby:2 %}
-                <img src="{% static project.image_path %}" alt="{{ project.title }}">
-                <div class="readme">
-                    <h2>{{ project.title }}</h2>
-                    <p>{{ project.description }}</p>
-                </div>
-                {% else %}
-                <div class="readme">
-                    <h2>{{ project.title }}</h2>
-                    <p>{{ project.description }}</p>
-                </div>
-                <img src="{% static project.image_path %}" alt="{{ project.title }}">
-                {% endif %}
+            {% if forloop.counter0|divisibleby:2 %}
+            <img src="{% static project.image_path %}" alt="{{ project.title }}" class="left">
+            <div class="readme">
+                <h2>{{ project.title }}</h2>
+                <p>{{ project.description }}</p>
             </div>
+            {% else %}
+            <div class="readme">
+                <h2>{{ project.title }}</h2>
+                <p>{{ project.description }}</p>
+            </div>
+            <img src="{% static project.image_path %}" alt="{{ project.title }}" class="right">
+            {% endif %}
         </a>
         {% endfor %}
     </div>
