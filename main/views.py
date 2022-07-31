@@ -17,7 +17,8 @@ WSGIRequest = Type['WSGIRequest']
 def main_views(request: WSGIRequest) -> HttpResponseRedirect:
     obj = PageInfo.objects.get(page_name="main")
     context = {
-        "name": obj.title
+        "name": obj.title,
+        "site": "main"
     }
     return render(request, "main.html", context)
 
@@ -25,7 +26,8 @@ def main_views(request: WSGIRequest) -> HttpResponseRedirect:
 def about_views(request: WSGIRequest) -> HttpResponseRedirect:
     obj = PageInfo.objects.get(page_name="about")
     context = {
-        "name": obj.title
+        "name": obj.title,
+        "site": "about"
     }
     return render(request, "about.html", context)
 
@@ -36,7 +38,8 @@ def projects_views(request: WSGIRequest) -> HttpResponseRedirect:
     context = {
         "name": obj.title,
         "projects": Links.link_set,
-        "inner": inner
+        "inner": inner,
+        "site": "projects"
     }
     return render(request, "projects.html", context)
 
@@ -49,6 +52,7 @@ def contact_views(request: WSGIRequest) -> HttpResponseRedirect:
         return HttpResponseRedirect("/")
     context = {
         "name": obj.title,
-        "form": form
+        "form": form,
+        "site": "contact"
     }
     return render(request, "contact.html", context)

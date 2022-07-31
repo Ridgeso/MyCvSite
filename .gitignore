@@ -21,3 +21,5 @@ secure.txt
 
 #files
 /static/colors*.png
+**/*.css.map
+**/*1.css

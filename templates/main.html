@@ -13,6 +13,16 @@
     </div>
 
     {% comment %} <!-- Main Site Content --> {% endcomment %}
+    <div id="crawl">
+        <section>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div id="bow"></div>
+        </section>
+    </div>
+
+    {% comment %} <!-- Main Part II --> {% endcomment %}
     <div id="main-block">
 
         {% comment %} <!-- First box --> {% endcomment %}
@@ -41,5 +51,8 @@
         </div>
 
     </div>
+{% endblock %}
 
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'main/mainscript.js'%}"></script>
 {% endblock %}

@@ -3,7 +3,6 @@
 
 {% block header %}
     <link rel="stylesheet" href="{% static 'contact/contactstyle.css' %}" type="text/css">
-    <script src="{% static 'contact/submit.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -17,4 +16,8 @@
             </div>
         </form>
     </div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'contact/submit.js' %}"></script>
 {% endblock %}

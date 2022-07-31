@@ -35,10 +35,9 @@ label {
 
     border: none;
     border-bottom: solid 2px #BB000E;
-    /* outline: none; */
     
     font-size: 18px;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: 'Comfortaa', cursive;
     color: #FFFFFF;
 
     transition: all 0.4s ease-in-out;
