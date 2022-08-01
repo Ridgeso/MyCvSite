@@ -1,6 +1,4 @@
 /* FONTS */
-/* Source Sans Pro 400/400italic */
-/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@0;1&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Square+Peg&family=Uchen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
@@ -10,7 +8,6 @@ body {
     padding: 0;
     background: #0F0F0F;
     color: #FCFAEF;
-    /* font-family: "Source Sans Pro", sans-serif; */
     font-family: 'Comfortaa', cursive;
     
     &::-webkit-scrollbar {
@@ -83,7 +80,6 @@ a {
 /* ^^^ Top Bar ^^^ */
 #top-bar {
     display: flex;
-    position:absolute;
     width: 100%;
     height: 96px;
 
@@ -96,6 +92,7 @@ a {
         display: flex;
     
         width: 100%;
+        padding: 0px;
         justify-content: space-around;
         
         list-style-type: none;

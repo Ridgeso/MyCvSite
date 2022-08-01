@@ -1,0 +1,180 @@
+
+/* ^^^ Main Block ^^^ */
+$border-radius: 64px;
+#crawl {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0px;
+    padding: 0px;
+    
+    background: #0101015d;
+    
+    justify-items: center;
+
+    .card {
+        display: list-item;
+        position: relative;
+        width: 450px;
+        height: 350px;
+        margin: 40px;
+        
+        overflow: hidden;
+
+        background: #353535;
+        box-shadow: 5px 5px 10px #000000;
+        border-radius: $border-radius;
+        list-style-type: none;
+        z-index: 1;
+
+        .button {
+            position: absolute;
+            width: fit-content;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            
+            font-size: 48px;
+            opacity: 0;
+            transition: all 0.2s ease-out 0.1s;
+        }
+
+        .name {
+            display: flex;
+            position: absolute;
+
+            bottom: 0;
+            width: 100%;
+            justify-content: center;
+            background-color: #F71735;
+
+            font-size: 32px;
+        }
+    
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 0px;
+            bottom: 0px;
+
+            background: #FF5F5F;
+            opacity: 0.7;
+
+            transition: all 0.2s ease-out;
+        }
+        
+        &:hover {
+            &::before {
+                height: 100%;
+                top: 0px;
+            }
+
+            .button {
+                opacity: 1;
+            }
+        }
+    }
+
+    #bow {
+        position: absolute;
+    
+        top: 25%;
+        right: -32%;
+        margin: 0px;
+        padding: 0px;
+    
+        width: 64%;
+        height: 50vh;
+    
+        background: #F71735;
+        border-radius: $border-radius 0px;
+    
+        // z-index: 0;
+        opacity: 0.0;
+        transition: all 0.3s ease-out;
+
+        &.fade {
+            opacity: 1.0;
+            right: -18%;
+        }
+    }
+}
+
+
+
+/* ^^^ Main Block ^^^ */
+.main-block {
+    display: grid;
+
+    justify-items: center;
+}
+
+/* ^^^ Projects ^^^ */
+.project-link {
+    display: flex;
+    margin-bottom: 128px;
+
+    width: 740px;
+    height: 420px;
+
+    background: #353535;
+    border-radius: 64px;
+    box-shadow: 7px 7px 10px 9px #000000;
+    transition: all 0.2s ease-out;
+
+    /* ^^^ Image ^^^ */
+    img {
+        position: relative;
+        width: 256px;
+        height: 256px;
+        top: calc(50% - 256px/2);
+
+        object-fit: cover;
+        
+        transition: all 0.2s ease-in-out;
+        
+        &.left { border-radius: 64px 0px  0px 64px; right: 64px; }
+        &.right { border-radius:  0px 64px 64px 0px; left: 64px; }
+    }
+
+    &:hover {
+        box-shadow: 7px 7px 25px 9px #000000;
+        transform: scale(1.01);
+        
+        img {
+            transform: scale(1.05);
+            &.left  { right: 80px; }
+            &.right { left : 80px; }
+        }
+    }
+}
+
+/* ^^^ ReadMe ^^^ */
+.readme {
+    width: 100%;    
+
+    h2 {
+        color: #F71735;
+        padding: 32px;
+        margin: 0px;
+        height: 15%;
+        font-size: 32px;
+        text-align: center;
+    }
+    
+    p {
+        margin: 0px;
+        padding: 16px;
+        height: 60%;
+        text-align: justify;
+        color: #FCFAEF;
+    }
+}

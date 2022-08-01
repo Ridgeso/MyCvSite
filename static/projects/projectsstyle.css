@@ -1,74 +1,151 @@
 /* ^^^ Main Block ^^^ */
-.main-block {
-    display: grid;
+#crawl {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background: rgba(1, 1, 1, 0.3647058824);
+  justify-items: center;
+}
+#crawl .card {
+  display: list-item;
+  position: relative;
+  width: 450px;
+  height: 350px;
+  margin: 40px;
+  overflow: hidden;
+  background: #353535;
+  box-shadow: 5px 5px 10px #000000;
+  border-radius: 64px;
+  list-style-type: none;
+  z-index: 1;
+}
+#crawl .card .button {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  opacity: 0;
+  transition: all 0.2s ease-out 0.1s;
+}
+#crawl .card .name {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  background-color: #F71735;
+  font-size: 32px;
+}
+#crawl .card::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  bottom: 0px;
+  background: #FF5F5F;
+  opacity: 0.7;
+  transition: all 0.2s ease-out;
+}
+#crawl .card:hover::before {
+  height: 100%;
+  top: 0px;
+}
+#crawl .card:hover .button {
+  opacity: 1;
+}
+#crawl #bow {
+  position: absolute;
+  top: 25%;
+  right: -32%;
+  margin: 0px;
+  padding: 0px;
+  width: 64%;
+  height: 50vh;
+  background: #F71735;
+  border-radius: 64px 0px;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+#crawl #bow.fade {
+  opacity: 1;
+  right: -18%;
+}
 
-    justify-items: center;
+/* ^^^ Main Block ^^^ */
+.main-block {
+  display: grid;
+  justify-items: center;
 }
 
 /* ^^^ Projects ^^^ */
 .project-link {
-    display: flex;
-    margin-bottom: 128px;
-
-    width: 740px;
-    height: 420px;
-
-    background: #353535;
-    border-radius: 64px;
-    box-shadow: 7px 7px 10px 9px #000000;
-    transition: all 0.2s ease-out;
+  display: flex;
+  margin-bottom: 128px;
+  width: 740px;
+  height: 420px;
+  background: #353535;
+  border-radius: 64px;
+  box-shadow: 7px 7px 10px 9px #000000;
+  transition: all 0.2s ease-out;
+  /* ^^^ Image ^^^ */
 }
-
-.project-link:hover {
-    box-shadow: 7px 7px 25px 9px #000000;
-    transform: scale(1.01);
-}
-
-/* ^^^ Image ^^^ */
 .project-link img {
-    position: relative;
-    width: 256px;
-    height: 256px;
-    top: calc(50% - 256px/2);
-
-    object-fit: cover;
-    
-    transition: all 0.2s ease-in-out;
+  position: relative;
+  width: 256px;
+  height: 256px;
+  top: calc(50% - 128px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.2s ease-in-out;
 }
-.project-link img.left { border-radius: 64px 0px  0px 64px; right: 64px; }
-.project-link img.right { border-radius:  0px 64px 64px 0px; left: 64px; }
-
-
+.project-link img.left {
+  border-radius: 64px 0px 0px 64px;
+  right: 64px;
+}
+.project-link img.right {
+  border-radius: 0px 64px 64px 0px;
+  left: 64px;
+}
+.project-link:hover {
+  box-shadow: 7px 7px 25px 9px #000000;
+  transform: scale(1.01);
+}
 .project-link:hover img {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
-
-.project-link:hover img.left  {
-    right: 80px;
+.project-link:hover img.left {
+  right: 80px;
 }
-
 .project-link:hover img.right {
-    left : 80px;
+  left: 80px;
 }
 
 /* ^^^ ReadMe ^^^ */
 .readme {
-    width: 100%;    
+  width: 100%;
 }
-
 .readme h2 {
-    color: #F71735;
-    padding: 32px;
-    margin: 0px;
-    height: 15%;
-    font-size: 32px;
-    text-align: center;
+  color: #F71735;
+  padding: 32px;
+  margin: 0px;
+  height: 15%;
+  font-size: 32px;
+  text-align: center;
 }
-
 .readme p {
-    margin: 0px;
-    padding: 16px;
-    height: 60%;
-    text-align: justify;
-    color: #FCFAEF;
-}
+  margin: 0px;
+  padding: 16px;
+  height: 60%;
+  text-align: justify;
+  color: #FCFAEF;
+}/*# sourceMappingURL=projectsstyle.css.map */

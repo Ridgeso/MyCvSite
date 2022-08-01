@@ -6,6 +6,24 @@
 {% endblock %}
 
 {% block content %}
+
+    {% comment %} <!-- Main Site Content --> {% endcomment %}
+    <h1>My whole work</h1>
+    <div id="crawl">
+        {% for project in projects %}
+        {% if project.name != "Ridgeso" %}
+        <div class="card">
+            <div class="button">
+                <a href="{{ project.link }}" target="_blank"> <i class="fab fa-github"></i><span> GitHub</span> </a>
+            </div>
+            <!-- <i class="fab fa-python"></i> -->
+            <div class="name"><span>{{ project.name }}</span></div>
+        </div>
+        {% endif %}
+        {% endfor %}
+        <div id="bow"></div>
+    </div>
+
     {% comment %} <!-- Main Site Content --> {% endcomment %}
     <div class="main-block">
         <h1>My whole work</h1>
@@ -53,4 +71,9 @@
         </a>
         {% endfor %}
     </div>
+{% endblock %}
+
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'projects/projectsscript.js'%}"></script>
 {% endblock %}

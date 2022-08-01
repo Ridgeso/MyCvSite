@@ -1,5 +1,8 @@
-/* ^^^ Introduction Picture ^^^ */
+#top-bar {
+    position: absolute;
+}
 
+/* ^^^ Introduction Picture ^^^ */
 #introduction {
     height: 100%;
     width: 100%;
@@ -22,57 +25,6 @@
     
         font-family: 'Square Peg', cursive;
         background: #000D;
-    }
-}
-
-/* ^^^ Main Block ^^^ */
-#crawl {
-    display: flex;
-    position: relative;
-    overflow: hidden;
-
-    width: 100%;
-    height: 100vh;
-
-    margin: 0px;
-    padding: 0px;
-    
-    background: #010101;
-    
-    scroll-snap-align: start;
-
-    section {
-        .card {
-            display: list-item;
-            width: 20px;
-            height: 20px;
-            margin: 20px;
-            background: #FCFAEF;
-        }
-
-        #bow {
-            position: absolute;
-        
-            top: 25%;
-            right: -32%;
-            margin: 0px;
-            padding: 0px;
-        
-            width: 64%;
-            height: 50vh;
-        
-            background: #F71735;
-            border-radius: 16px 0px;
-            // transform: skewY(15deg);
-        
-            opacity: 0.0;
-            transition: all 0.3s ease-out;
-
-            &.fade {
-                opacity: 1.0;
-                right: -18%;
-            }
-        }
     }
 }
 

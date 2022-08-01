@@ -1,3 +1,7 @@
+#top-bar {
+  position: absolute;
+}
+
 /* ^^^ Introduction Picture ^^^ */
 #introduction {
   height: 100%;
@@ -17,44 +21,6 @@
   align-items: center;
   font-family: "Square Peg", cursive;
   background: rgba(0, 0, 0, 0.8666666667);
-}
-
-/* ^^^ Main Block ^^^ */
-#crawl {
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  margin: 0px;
-  padding: 0px;
-  background: #010101;
-  scroll-snap-align: start;
-}
-#crawl section .card {
-  display: list-item;
-  width: 20px;
-  height: 20px;
-  margin: 20px;
-  background: #FCFAEF;
-}
-#crawl section #bow {
-  position: absolute;
-  top: 25%;
-  right: -32%;
-  margin: 0px;
-  padding: 0px;
-  width: 64%;
-  height: 50vh;
-  background: #F71735;
-  border-radius: 16px 0px;
-  transform: skewY(15deg);
-  opacity: 0;
-  transition: all 0.3s ease-out;
-}
-#crawl section #bow.fade {
-  opacity: 1;
-  right: -18%;
 }
 
 /* ^^^ Part II ^^^ */
