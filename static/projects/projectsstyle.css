@@ -5,11 +5,12 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100%;
   margin: 0px;
   padding: 0px;
-  background: rgba(1, 1, 1, 0.3647058824);
   justify-items: center;
+}
+#crawl h1 {
+  height: 10vh;
 }
 #crawl .card {
   display: list-item;
@@ -18,9 +19,11 @@
   height: 350px;
   margin: 40px;
   overflow: hidden;
-  background: #353535;
+  background: var(--picture);
+  background-size: cover;
+  background-position: center;
   box-shadow: 5px 5px 10px #000000;
-  border-radius: 64px;
+  border-radius: 16px;
   list-style-type: none;
   z-index: 1;
 }
@@ -65,87 +68,19 @@
 }
 #crawl #bow {
   position: absolute;
-  top: 25%;
   right: -32%;
+  top: 50%;
+  transform: translate(0, -50%);
   margin: 0px;
   padding: 0px;
   width: 64%;
   height: 50vh;
   background: #F71735;
-  border-radius: 64px 0px;
+  border-radius: 16px 0px;
   opacity: 0;
   transition: all 0.3s ease-out;
 }
 #crawl #bow.fade {
   opacity: 1;
   right: -18%;
-}
-
-/* ^^^ Main Block ^^^ */
-.main-block {
-  display: grid;
-  justify-items: center;
-}
-
-/* ^^^ Projects ^^^ */
-.project-link {
-  display: flex;
-  margin-bottom: 128px;
-  width: 740px;
-  height: 420px;
-  background: #353535;
-  border-radius: 64px;
-  box-shadow: 7px 7px 10px 9px #000000;
-  transition: all 0.2s ease-out;
-  /* ^^^ Image ^^^ */
-}
-.project-link img {
-  position: relative;
-  width: 256px;
-  height: 256px;
-  top: calc(50% - 128px);
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: all 0.2s ease-in-out;
-}
-.project-link img.left {
-  border-radius: 64px 0px 0px 64px;
-  right: 64px;
-}
-.project-link img.right {
-  border-radius: 0px 64px 64px 0px;
-  left: 64px;
-}
-.project-link:hover {
-  box-shadow: 7px 7px 25px 9px #000000;
-  transform: scale(1.01);
-}
-.project-link:hover img {
-  transform: scale(1.05);
-}
-.project-link:hover img.left {
-  right: 80px;
-}
-.project-link:hover img.right {
-  left: 80px;
-}
-
-/* ^^^ ReadMe ^^^ */
-.readme {
-  width: 100%;
-}
-.readme h2 {
-  color: #F71735;
-  padding: 32px;
-  margin: 0px;
-  height: 15%;
-  font-size: 32px;
-  text-align: center;
-}
-.readme p {
-  margin: 0px;
-  padding: 16px;
-  height: 60%;
-  text-align: justify;
-  color: #FCFAEF;
 }/*# sourceMappingURL=projectsstyle.css.map */

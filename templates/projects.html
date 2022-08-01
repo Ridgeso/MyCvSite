@@ -7,69 +7,40 @@
 
 {% block content %}
 
-    {% comment %} <!-- Main Site Content --> {% endcomment %}
-    <h1>My whole work</h1>
-    <div id="crawl">
-        {% for project in projects %}
-        {% if project.name != "Ridgeso" %}
-        <div class="card">
-            <div class="button">
-                <a href="{{ project.link }}" target="_blank"> <i class="fab fa-github"></i><span> GitHub</span> </a>
-            </div>
-            <!-- <i class="fab fa-python"></i> -->
-            <div class="name"><span>{{ project.name }}</span></div>
-        </div>
-        {% endif %}
-        {% endfor %}
-        <div id="bow"></div>
-    </div>
-
-    {% comment %} <!-- Main Site Content --> {% endcomment %}
-    <div class="main-block">
+    <div>
+        {% comment %} <!-- Main Site Content --> {% endcomment %}
         <h1>My whole work</h1>
-        {% comment %} <!-- Projects List --> {% endcomment %}
-        {% for link in projects %}
-        {% if link.name != "Ridgeso" %}
-        <a href="{{ link.link }}" class="project-link" target="_blank">
-            {% if forloop.counter0|divisibleby:2 %}
-            <img src="{% static link.img %}" alt="{{link.img_info}}" class="left">
-            <div class="readme">
-                <h2>{{ link.name }}</h2>
-                <p>{{ link.text }}</p>
+        <div id="crawl">
+            {% for project in projects %}
+            {% if project.name != "Ridgeso" %}
+            <div class="card" style="--picture:url({% static project.img %});">
+                <div class="button">
+                    <a href="{{ project.link }}" target="_blank"> <i class="fab fa-github"></i><span> GitHub</span> </a>
+                </div>
+                <!-- <i class="fab fa-python"></i> -->
+                <div class="name"><span>{{ project.name }}</span></div>
             </div>
-            {% else %}
-            <div class="readme">
-                <h2>{{ link.name }}</h2>
-                <p>{{ link.text }}</p>
-            </div>
-            <img src="{% static link.img %}" alt="{{link.img_info}}" class="right">
             {% endif %}
-        </a>
-        {% endif %}
-        {% endfor %}
+            {% endfor %}
+            <div id="bow"></div>
+        </div>
     </div>
 
-    {% comment %} <!-- Inner Projects --> {% endcomment %}
-    <div class="main-block">
+    <div>
+        {% comment %} <!-- Inner Projects --> {% endcomment %}
         <h1>My build in projects</h1>
-        {% comment %} <!-- Inner Links --> {% endcomment %}
-        {% for project in inner %}
-        <a href="{{ project.get_absolute_url }}" class="project-link">
-            {% if forloop.counter0|divisibleby:2 %}
-            <img src="{% static project.image_path %}" alt="{{ project.title }}" class="left">
-            <div class="readme">
-                <h2>{{ project.title }}</h2>
-                <p>{{ project.description }}</p>
+        <div id="crawl">
+            {% for project in inner %}
+            <div class="card" style="--picture:url({% static project.image_path %});">
+                <div class="button">
+                    <a href="{{ project.get_absolute_url }}"></i><span> GitHub</span> </a>
+                </div>
+                <!-- <i class="fab fa-python"></i> -->
+                <div class="name"><span>{{ project.title }}</span></div>
             </div>
-            {% else %}
-            <div class="readme">
-                <h2>{{ project.title }}</h2>
-                <p>{{ project.description }}</p>
-            </div>
-            <img src="{% static project.image_path %}" alt="{{ project.title }}" class="right">
-            {% endif %}
-        </a>
-        {% endfor %}
+            {% endfor %}
+            <div id="bow"></div>
+        </div>
     </div>
 {% endblock %}
 

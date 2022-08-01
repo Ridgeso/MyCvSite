@@ -1,6 +1,6 @@
 
 /* ^^^ Main Block ^^^ */
-$border-radius: 64px;
+$border-radius: 16px;
 #crawl {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -9,14 +9,15 @@ $border-radius: 64px;
     overflow: hidden;
 
     width: 100%;
-    height: 100%;
-
     margin: 0px;
     padding: 0px;
     
-    background: #0101015d;
-    
+    // background: #080808;
     justify-items: center;
+
+    h1 {
+        height: 10vh;
+    }
 
     .card {
         display: list-item;
@@ -24,10 +25,12 @@ $border-radius: 64px;
         width: 450px;
         height: 350px;
         margin: 40px;
-        
-        overflow: hidden;
+        overflow: hidden;        
 
-        background: #353535;
+        background: var(--picture);
+        background-size: cover;
+        background-position: center;
+
         box-shadow: 5px 5px 10px #000000;
         border-radius: $border-radius;
         list-style-type: none;
@@ -85,9 +88,9 @@ $border-radius: 64px;
 
     #bow {
         position: absolute;
-    
-        top: 25%;
         right: -32%;
+        top: 50%;
+        transform: translate(0, -50%);
         margin: 0px;
         padding: 0px;
     
@@ -97,7 +100,6 @@ $border-radius: 64px;
         background: #F71735;
         border-radius: $border-radius 0px;
     
-        // z-index: 0;
         opacity: 0.0;
         transition: all 0.3s ease-out;
 
@@ -105,76 +107,5 @@ $border-radius: 64px;
             opacity: 1.0;
             right: -18%;
         }
-    }
-}
-
-
-
-/* ^^^ Main Block ^^^ */
-.main-block {
-    display: grid;
-
-    justify-items: center;
-}
-
-/* ^^^ Projects ^^^ */
-.project-link {
-    display: flex;
-    margin-bottom: 128px;
-
-    width: 740px;
-    height: 420px;
-
-    background: #353535;
-    border-radius: 64px;
-    box-shadow: 7px 7px 10px 9px #000000;
-    transition: all 0.2s ease-out;
-
-    /* ^^^ Image ^^^ */
-    img {
-        position: relative;
-        width: 256px;
-        height: 256px;
-        top: calc(50% - 256px/2);
-
-        object-fit: cover;
-        
-        transition: all 0.2s ease-in-out;
-        
-        &.left { border-radius: 64px 0px  0px 64px; right: 64px; }
-        &.right { border-radius:  0px 64px 64px 0px; left: 64px; }
-    }
-
-    &:hover {
-        box-shadow: 7px 7px 25px 9px #000000;
-        transform: scale(1.01);
-        
-        img {
-            transform: scale(1.05);
-            &.left  { right: 80px; }
-            &.right { left : 80px; }
-        }
-    }
-}
-
-/* ^^^ ReadMe ^^^ */
-.readme {
-    width: 100%;    
-
-    h2 {
-        color: #F71735;
-        padding: 32px;
-        margin: 0px;
-        height: 15%;
-        font-size: 32px;
-        text-align: center;
-    }
-    
-    p {
-        margin: 0px;
-        padding: 16px;
-        height: 60%;
-        text-align: justify;
-        color: #FCFAEF;
     }
 }

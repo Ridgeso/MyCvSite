@@ -1,32 +1,25 @@
-// import { scrollingTopButton } from "../module"
+var bow = document.querySelector('#bow');
+function bowAppear() {
+    var bowPosition = bow.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 2;
 
-window.addEventListener("load", () => {
-    // Get bow
-    let bow = document.getElementById("bow")
-    
-    //Invisible on top of the site
-    const fade = 10
-    const origin = -18
-    window.addEventListener("scroll", () => {
-        let scrolled = window.scrollY - fade
-        console.log(scrolled)
-        if (scrolled > 0) {
-            bow.className = "fade"
-            let right = origin + scrolled * 0.055
+    if (bowPosition < screenPosition) {
+        bow.classList.add('fade');
+    }
+}
 
-            if (right < 25.0)
-                bow.style.right = right + "%"
-        }
-        else {
-            bow.className = ""
-            bow.style.right = "-32%"
-        }
-    })
+function moveBow() {
+    const fade = 10;
+    const origin = -18;
 
-    // window.addEventListener("scroll", () => {
-    //     let rightVal = parseFloat(bow.style.right)
-    //     if (bow.className === "fase" && rightVal < 92) {
+    let scrolled = window.scrollY - fade;
+    if (scrolled > 0) {;
+        let right = origin + scrolled * 0.055;
 
-    //     }
-    // })
-})
+        if (right < 25.0);
+            bow.style.right = right + "%";
+    };
+}
+
+window.addEventListener('scroll', bowAppear);
+window.addEventListener('scroll', moveBow);
