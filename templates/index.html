@@ -18,8 +18,8 @@
     
     {% comment %} <!-- Top Bar --> {% endcomment %}
     <div id="top-bar">
+        <a class="logo" href="/">{% if site != "main" %}<span>Jarek Skwarczek</span>{% endif %}</a>
         <ul class="links">
-            {% if site != "main" %}<li><a href="/"><span>Jarek Skwarczek</span></a></li>{% endif %}
             {% if site != "about" %}<li><a href="/about/"><span>About Me</span></a></li>{% endif %}
             {% if site != "projects" %}<li><a href="/projects/"><span>My Projects</span></a></li>{% endif %}
             {% if site != "contact" %}<li><a href="/contact/"><span>Contact</span></a></li>{% endif %}
@@ -32,29 +32,36 @@
     {% endblock %}
 
     {% comment %} <!-- Bottom Bar --> {% endcomment %}
-    <div id="bottom-bar">
-
-        {% comment %} <!-- Informations --> {% endcomment %}
-        <div class="info">
-            <!-- <i class="fa-brands fa-square-github"></i> -->
-            <i class="fab fa-github"></i>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, qui!</p>
+    <footer id="bottom-bar">
+        <div class="last-wisper">
+            <h4>-- Contat Informations --</h4>
+            <p>Available at any time of the day. I prefer by email because it is more flexible.</p>
         </div>
-
-        {% comment %} <!-- A little more info --> {% endcomment %}
-        <div class="rest">
-            <ul>
-                <li>Contact</li>
-                <li>Phone number: 123456789</li>
-                <li>email: random123@email.com</li>
-            </ul>
+        <div class="find-me">
+            <div>
+                {% comment %} <!-- Informations --> {% endcomment %}
+                <h4>Follow Me On:</h4>
+                <ul>
+                    <!-- <i class="fa-brands fa-square-github"></i> -->
+                    <li><i class="fab fa-github"></i> GitHub</li>
+                    <li><img src="{% static 'codewars.svg' %}"> CodeWars</li>
+                </ul>
+            </div>
+            
+            <div>
+                {% comment %} <!-- A little more info --> {% endcomment %}
+                <h4>Contact</h4>
+                <ul>
+                    <li><span>P: </span>123 456 789</li>
+                    <li><span>E: </span>random123@email.com</li>
+                </ul>
+            </div>
         </div>
-
-    </div>
+    </footer>
 
     <div id="scroll"><img src="{% static 'arrowup.png' %}" alt="Scroll button"></div>
 
-    <script type="text/javascript" src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+    <script type="text/javascript" src="https://kit.fontawesome.com/3f7224d645.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{% static 'basescript.js'%}"></script>
     {% block scripts %}
     {% endblock %}

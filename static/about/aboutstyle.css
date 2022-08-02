@@ -1,3 +1,5 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400;700&display=swap");
 /* ^^^ about ^^^ */
 #about {
   display: grid;
@@ -20,18 +22,18 @@
   margin: 40px 32px;
   align-items: center;
   justify-content: center;
-  background: #353535;
+  background: #FFFFFF;
   border-radius: 16px;
-  box-shadow: 7px 7px 10px 9px #000000;
+  box-shadow: 7px 7px 10px 9px #B3CACC;
   transition: all 0.2s ease-out;
 }
 .my-past i {
   font-size: 128px;
-  color: #F71735;
+  color: #5465FF;
   padding-left: 32px;
 }
 .my-past:hover {
-  box-shadow: 7px 7px 25px 9px #000000;
+  box-shadow: 7px 7px 25px 9px #B3CACC;
   transform: scale(1.01);
 }
 
@@ -50,7 +52,7 @@
 }
 .my-text {
   padding: 64px;
-  color: #FCFAFE;
+  color: #000000;
   text-align: justify;
 }
 
@@ -70,7 +72,7 @@
 
 /* - Skills Levels - */
 h3 {
-  color: #F71735;
+  color: #5465FF;
   font-size: 64px;
   margin: 0px;
 }
@@ -88,13 +90,13 @@ h3 {
   display: block;
   padding: 0px;
   margin-bottom: 40px;
-  border-bottom: solid 6px rgba(255, 95, 95, 0.5215686275);
+  border-bottom: solid 6px #9193FF0F;
 }
 .lang span {
   position: absolute;
   bottom: -6px;
   font-size: 28px;
-  border-bottom: solid 6px #BB000E;
+  border-bottom: solid 6px #003BCB;
 }
 .lang span.python {
   width: 50%;

@@ -1,6 +1,6 @@
+@import '../generic';
 
 /* ^^^ Main Block ^^^ */
-$border-radius: 16px;
 #crawl {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -12,7 +12,6 @@ $border-radius: 16px;
     margin: 0px;
     padding: 0px;
     
-    // background: #080808;
     justify-items: center;
 
     h1 {
@@ -31,7 +30,7 @@ $border-radius: 16px;
         background-size: cover;
         background-position: center;
 
-        box-shadow: 5px 5px 10px #000000;
+        box-shadow: 5px 5px 10px $secondary-color-dark;
         border-radius: $border-radius;
         list-style-type: none;
         z-index: 1;
@@ -55,7 +54,7 @@ $border-radius: 16px;
             bottom: 0;
             width: 100%;
             justify-content: center;
-            background-color: #F71735;
+            background-color: $primary-color;
 
             font-size: 32px;
         }
@@ -68,8 +67,8 @@ $border-radius: 16px;
             height: 0px;
             bottom: 0px;
 
-            background: #FF5F5F;
-            opacity: 0.7;
+            background: $secondary-color-light;
+            opacity: 0.6;
 
             transition: all 0.2s ease-out;
         }
@@ -97,7 +96,7 @@ $border-radius: 16px;
         width: 64%;
         height: 50vh;
     
-        background: #F71735;
+        background: $primary-color;
         border-radius: $border-radius 0px;
     
         opacity: 0.0;

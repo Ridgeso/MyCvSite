@@ -1,23 +1,22 @@
 /* FONTS */
-@import url("https://fonts.googleapis.com/css2?family=Square+Peg&family=Uchen&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400;700&display=swap");
 /* ^^^ Default ^^^ */
 body {
   margin: 0;
   padding: 0;
-  background: #0F0F0F;
-  color: #FCFAEF;
-  font-family: "Comfortaa", cursive;
+  background: #E5FDFF;
+  color: #000000;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
 }
 body::-webkit-scrollbar {
   width: 0px;
   border-radius: 6px;
 }
 body::-webkit-scrollbar-track {
-  background: #0F0F0F;
+  background: #E5FDFF;
 }
 body::-webkit-scrollbar-thumb {
-  background: #F71735;
+  background: #5465FF;
 }
 
 #scroll {
@@ -27,7 +26,7 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   opacity: 0;
   transition: all 0.3s ease-in-out;
-  background: #FF5F5F;
+  background: #9193FF;
   border-radius: 50%;
 }
 #scroll.fade {
@@ -42,9 +41,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 h1, h2 {
-  text-align: center;
-  color: #F71735;
-  font-size: 12em;
+  color: #5465FF;
+  font-size: 64px;
 }
 
 h2 {
@@ -53,11 +51,11 @@ h2 {
 
 a {
   text-decoration: none;
-  color: #F71735;
+  color: #5465FF;
   transition-duration: 0.25s;
 }
 a:hover {
-  color: #BB000E;
+  color: #003BCB;
 }
 
 /* ^^^ Top Bar ^^^ */
@@ -65,21 +63,24 @@ a:hover {
   display: flex;
   width: 100%;
   height: 96px;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: space-between;
   font-size: 32px;
 }
+#top-bar .logo {
+  margin: 0px 40px;
+}
 #top-bar .links {
-  display: flex;
-  width: 100%;
+  display: inline;
   padding: 0px;
   justify-content: space-around;
   list-style-type: none;
 }
 #top-bar .links li {
   display: inline-block;
+  margin: 0px 40px;
   transition-duration: 0.25s;
-  color: #F71735;
+  color: #5465FF;
 }
 
 @media screen and (max-width: 877px) {
@@ -95,22 +96,39 @@ a:hover {
 }
 /* ^^^ Bottom Bar ^^^ */
 #bottom-bar {
+  width: 100%;
+  height: 60vh;
+  background: #B3CACC;
+}
+#bottom-bar h4 {
+  font-size: 22px;
+  margin: 5px 0px;
+}
+#bottom-bar .last-wisper {
+  padding: 70px 50px;
+}
+#bottom-bar .find-me {
   display: flex;
   position: absolute;
+  align-items: flex-start;
   width: 100%;
-  height: 128px;
-  background: #000000;
-  align-items: center;
 }
-#bottom-bar .info {
-  position: relative;
-  width: 50%;
-  padding-left: 40px;
+#bottom-bar .find-me div {
+  padding: 0px 50px;
+  flex: 1;
 }
-#bottom-bar .rest {
-  position: relative;
-  width: 50%;
-}
-#bottom-bar .rest ul {
+#bottom-bar .find-me div ul {
   list-style-type: none;
+  font-weight: 300;
+  opacity: 0.8;
+}
+#bottom-bar .find-me div ul li {
+  padding-bottom: 10px;
+}
+#bottom-bar .find-me div ul li span {
+  filter: brightness(0.6);
+}
+#bottom-bar .find-me div ul li img {
+  width: 18px;
+  filter: invert(1);
 }/*# sourceMappingURL=basestyle.css.map */

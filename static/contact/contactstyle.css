@@ -1,89 +1,75 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400;700&display=swap");
 /* Main Style */
 #input-form {
-    display: flex;
-
-    width: 100%;
-    height: 100vh;
-
-    align-items: center;
-    justify-content: center;
-
-    color: #F71735;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: #5465FF;
 }
-
-#my-form {
-    position: relative;
+#input-form #my-form {
+  position: relative;
 }
-
-form p {
-    position: relative;
-    margin: 64px;
+#input-form #my-form p {
+  position: relative;
+  margin: 64px;
 }
 
 /* Input Style */
 label {
-    position: absolute;
-    font-size: 32px;
-    bottom: 100%;
+  position: absolute;
+  font-size: 32px;
+  bottom: 100%;
 }
 
 .input {
-    background: #353535;
-    width: 100%;
-    height: 16px;
-    padding: 16px 6px;
-
-    border: none;
-    border-bottom: solid 2px #BB000E;
-    
-    font-size: 18px;
-    font-family: 'Comfortaa', cursive;
-    color: #FFFFFF;
-
-    transition: all 0.4s ease-in-out;
+  background: #FFFFFF;
+  width: 100%;
+  height: 16px;
+  padding: 16px 6px;
+  border: none;
+  border-bottom: solid 2px #003BCB;
+  font-size: 18px;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  color: #5465FF;
+  transition: all 0.4s ease-in-out;
 }
-
 .input:focus, .input:valid {
-    border-radius: 12px;
-    border-bottom: solid 2px #BB000E;
+  border-radius: 12px;
+  border-bottom: solid 2px #003BCB;
 }
 
 .message {
-    font-size: 16px;
-    border: solid 2px #BB000E;
-    border-radius: 12px;
-    height: 200px;
+  font-size: 16px;
+  border: solid 2px #003BCB;
+  border-radius: 12px;
+  height: 200px;
 }
 
 /* Buttnos */
 .buttons {
-    position: relative;
-    display: flex;
-
-    justify-content: space-around;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
 }
-
-.btn {
-    border: none;
-    background: #000000;
-    width: 24%;
-    height: 32px;
-    margin-left: 32px;
-    margin-top: 6px;
-
-    border-radius: 4px;
-    outline: none;
-    cursor: pointer;
-
-    font-weight: bold;
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 100%;
-    color: #FFFFFF;
-
-    transition: all 0.2s linear;
+.buttons .btn {
+  border: none;
+  background: #B3CACC;
+  width: 24%;
+  height: 32px;
+  margin-left: 32px;
+  margin-top: 6px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 100%;
+  color: #5465FF;
+  transition: all 0.2s linear;
 }
-
-.btn:hover {
-    background: #353535;
-    transform: scale(1.2);
-}
+.buttons .btn:hover {
+  transform: scale(1.2);
+}/*# sourceMappingURL=contactstyle.css.map */

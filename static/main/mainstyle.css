@@ -1,33 +1,35 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400;700&display=swap");
 #top-bar {
   position: absolute;
+  z-index: 1;
 }
 
 /* ^^^ Introduction Picture ^^^ */
 #introduction {
   display: flex;
+  position: relative;
   height: 100vh;
   width: 100vw;
-  align-items: center;
+  align-items: flex-end;
+}
+#introduction .wrapper {
+  width: 100%;
+  height: 30vh;
+  z-index: 1;
+}
+#introduction::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: url("./myphoto.png");
   background-size: 60vh;
   background-repeat: no-repeat;
   background-position: 75% bottom;
-}
-#introduction h1 {
-  display: flex;
-  z-index: 20;
-  margin-left: 20vw;
-  text-align: left;
-  font-family: "Square Peg", cursive;
-}
-#introduction img {
-  position: absolute;
-  bottom: 0;
-  right: 12%;
-  z-index: 0;
-  width: auto;
-  height: 90%;
-  filter: brightness(0.5);
+  filter: grayscale(100%);
 }
 
 /* ^^^ Part II ^^^ */
@@ -47,8 +49,8 @@
   opacity: 0;
   background: var(--img);
   background-size: cover;
-  border-radius: 16px;
-  box-shadow: -7px 7px 10px 9px #000000;
+  border-radius: 8px;
+  box-shadow: -7px 7px 10px 9px #B3CACC;
   transition: all 0.5s ease-in-out;
 }
 #main-block .content-box a {
@@ -57,17 +59,17 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  color: #F71735;
+  color: #9193FF;
 }
 #main-block .content-box a span {
   align-self: center;
-  font-weight: 700;
+  font-weight: 200;
   font-size: 64px;
   transition: all 0.2s ease-out;
   background: rgba(0, 0, 0, 0.5333333333);
 }
 #main-block .content-box a span:hover {
-  box-shadow: -7px 7px 25px 9px #000000;
+  box-shadow: -7px 7px 25px #B3CACC;
   transform: scale(1.01);
 }
 #main-block .content-box.content-appear {

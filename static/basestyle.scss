@@ -1,24 +1,22 @@
-/* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Square+Peg&family=Uchen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import './generic';
 
 /* ^^^ Default ^^^ */
 body {
     margin: 0;
     padding: 0;
-    background: #0F0F0F;
-    color: #FCFAEF;
-    font-family: 'Comfortaa', cursive;
+    background: $secondary-color;
+    color: $font-color;
+    font-family: $font-family;
     
     &::-webkit-scrollbar {
         width: 0px;
         border-radius: 6px;
     }
     &::-webkit-scrollbar-track {
-        background: #0F0F0F;
+        background: $secondary-color;
     }
     &::-webkit-scrollbar-thumb {
-        background: #F71735
+        background: $primary-color;
     }
 }
 
@@ -31,7 +29,7 @@ body {
     opacity: 0.0;
     transition: all 0.3s ease-in-out;
 
-    background: #FF5F5F    ;
+    background: $primary-color-light;
     border-radius: 50%;
     
     &.fade {
@@ -49,10 +47,10 @@ body {
 }
 
 h1, h2 {
-    text-align: center;
+    // text-align: center;
 
-    color: #F71735;
-    font-size: 12em;
+    color: $primary-color;
+    font-size: 64px;
 }
 
 h2 {
@@ -61,11 +59,11 @@ h2 {
 
 a {
     text-decoration: none;
-    color: #F71735;
+    color: $primary-color;
     transition-duration: 0.25s;
     
     &:hover {
-        color: #BB000E;
+        color: $primary-color-dark;
     }
 }
 
@@ -75,15 +73,18 @@ a {
     width: 100%;
     height: 96px;
 
-    justify-content: flex-end;
     align-items: center;
+    justify-content: space-between;
 
     font-size: 32px;
+
+    .logo {
+        margin: 0px 40px;
+    }
     
     .links {
-        display: flex;
+        display: inline;
     
-        width: 100%;
         padding: 0px;
         justify-content: space-around;
         
@@ -91,10 +92,9 @@ a {
         
         li {
             display: inline-block;
-        
+            margin: 0px 40px;
             transition-duration: 0.25s;
-        
-            color: #F71735;
+            color: $primary-color;
         }
     }
 }
@@ -112,27 +112,48 @@ a {
 
 /* ^^^ Bottom Bar ^^^ */
 #bottom-bar {
-    display: flex;
-    position: absolute;
-
     width: 100%;
-    height: 128px;
-
-    background: #000000;
-    align-items: center;
+    height: 60vh;
+    background: $secondary-color-dark;
     
-    .info {
-        position: relative;
-        width: 50%;
-        padding-left: 40px;
+    h4 {
+        font-size: 22px;
+        // font-weight: $font-light;
+        margin: 5px 0px;
     }
-    
-    .rest {
-        position: relative;
-        width: 50%;
+
+    .last-wisper {
+        padding: 70px 50px;
+    }
+
+    .find-me {
+        display: flex;
+        position: absolute;
+        align-items: flex-start;
+        width: 100%;
         
-        ul {
-            list-style-type: none;
+        div {
+            padding: 0px 50px;
+            flex: 1;
+
+            ul {
+                list-style-type: none;
+                font-weight: $font-light;
+                opacity: 0.8;
+
+                li {
+                    padding-bottom: 10px;
+                    
+                    span {
+                        filter: brightness(0.6);
+                    }
+
+                    img {
+                        width: 18px;
+                        filter: invert(1);
+                    }
+                }
+            }
         }
     }
 }

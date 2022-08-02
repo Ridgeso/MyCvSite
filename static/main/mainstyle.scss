@@ -1,43 +1,52 @@
+@import '../generic';
+
 #top-bar {
     position: absolute;
+    z-index: 1;
 }
 
 /* ^^^ Introduction Picture ^^^ */
 #introduction {
     display: flex;
+    position: relative;
     height: 100vh;
     width: 100vw;
     
-    align-items: center;
-
-    background: url("./myphoto.png");
-    background-size: 60vh;
-    background-repeat: no-repeat;
-    background-position: 75% bottom;
-    // background-position: center;
-    // background-attachment: fixed;
-    
-    h1 {
-        display: flex;
-        z-index: 20;
-
-        margin-left: 20vw;
-    
-        text-align: left;
-        font-family: 'Square Peg', cursive;
+    align-items: flex-end;
+    .wrapper {
+        width: 100%;
+        height: 30vh;
+        z-index: 1;
     }
 
-    img {
+    &::before {
+        content: '';
         position: absolute;
-        bottom: 0;
-        right: 12%;
-
-        z-index: 0;
-        width: auto;
-        height: 90%;
-
-        filter: brightness(0.5)
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: url("./myphoto.png");
+        background-size: 60vh;
+        background-repeat: no-repeat;
+        background-position: 75% bottom;
+        filter: grayscale(100%);
     }
+
+    // h1 {
+    //     // z-index: 1;
+    //     // font-family: $font-family;
+    // }
+
+    // img {
+    //     position: absolute;
+    //     bottom: 0;
+    //     right: 12%;
+
+    //     z-index: 0;
+    //     width: auto;
+    //     height: 90%;
+
+    //     filter: brightness(0.5)
+    // }
 }
 
 /* ^^^ Part II ^^^ */
@@ -47,7 +56,6 @@
     flex-wrap: wrap;
     justify-content:center;
 
-    // background: #080808;
     padding: 220px 0px;
 
     .content-box {
@@ -62,11 +70,10 @@
         background: var(--img);
         background-size: cover;
 
-        border-radius: 16px;
-        box-shadow: -7px 7px 10px 9px #000000;
+        border-radius: 8px;
+        box-shadow: -7px 7px 10px 9px $secondary-color-dark;
 
         transition: all 0.5s ease-in-out;
-        
         
         a {
             display: flex;
@@ -75,17 +82,17 @@
             height: 100%;
         
             text-align: center;
-            color: #F71735;
+            color: $primary-color-light;
             
             span {
                 align-self: center;
-                font-weight: 700;
+                font-weight: $font-extra-light;
                 font-size: 64px;
                 transition: all 0.2s ease-out;
                 background: #0008;
 
                 &:hover {
-                    box-shadow: -7px 7px 25px 9px #000000;
+                    box-shadow: -7px 7px 25px $secondary-color-dark;
                     transform: scale(1.01);
                 }
             }
