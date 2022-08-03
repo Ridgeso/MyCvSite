@@ -15,16 +15,23 @@
 </head>
 {% comment %} <!-- BODY OF THE SITE --> {% endcomment %}
 <body>
-    
+    <a id="logo" href="/">
+        <img src="{% static 'temporary.svg' %}">
+        <p>
+            <span class="name">JAREK SKWARCZEK</span>
+            <br>
+            <span class="footer">PROGRAMER</span>
+        </p>
+    </a>
+
     {% comment %} <!-- Top Bar --> {% endcomment %}
-    <div id="top-bar">
-        <a class="logo" href="/">{% if site != "main" %}<span>Jarek Skwarczek</span>{% endif %}</a>
-        <ul class="links">
-            {% if site != "about" %}<li><a href="/about/"><span>About Me</span></a></li>{% endif %}
-            {% if site != "projects" %}<li><a href="/projects/"><span>My Projects</span></a></li>{% endif %}
-            {% if site != "contact" %}<li><a href="/contact/"><span>Contact</span></a></li>{% endif %}
-        </ul>
-    </div>
+    <span class="open"  visible="true" ><small>Menu</small><i class="fa-solid fa-bars" ></i></span>
+    <span class="close" visible="false"><small>Close</small><i class="fa-solid fa-xmark"></i></span>
+    <ul id="top-bar" visible="false">
+        <li><a href="/about/"><b>00 </b><span>About Me</span></a></li>
+        <li><a href="/projects/"><b>01 </b><span>My Projects</span></a></li>
+        <li><a href="/contact/"><b>02 </b><span>Contact</span></a></li>
+    </ul>
 
     {% comment %} <!-- Main Block --> {% endcomment %}
     {% block content %}
