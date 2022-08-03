@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
 
-    color: $primary-color;
+    color: $font-color;
     
     #my-form {
         position: relative;
@@ -40,7 +40,7 @@ label {
     
     font-size: 18px;
     font-family: $font-family;
-    color: $primary-color;
+    color: $font-color;
 
     transition: all 0.4s ease-in-out;
     
@@ -79,7 +79,7 @@ label {
         font-weight: $font-bold;
         font-family: "Source Sans Pro", sans-serif;
         font-size: 100%;
-        color: $primary-color;
+        color: $font-color;
     
         transition: all 0.2s linear;
         

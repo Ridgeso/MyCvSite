@@ -1,11 +1,20 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400;700&display=swap");
 /* ^^^ Default ^^^ */
+::-moz-selection {
+  color: white;
+  background: black;
+}
+::selection {
+  color: white;
+  background: black;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background: #E5FDFF;
-  color: #000000;
+  background: #FFFFFF;
+  color: #303030;
   font-family: "IBM Plex Sans Arabic", sans-serif;
 }
 body::-webkit-scrollbar {
@@ -13,36 +22,38 @@ body::-webkit-scrollbar {
   border-radius: 6px;
 }
 body::-webkit-scrollbar-track {
-  background: #E5FDFF;
+  background: #FFFFFF;
 }
 body::-webkit-scrollbar-thumb {
-  background: #5465FF;
+  background: #161616;
 }
 
 #scroll {
   position: fixed;
   right: 32px;
   bottom: 32px;
+  width: 48px;
+  height: 48px;
   cursor: pointer;
   opacity: 0;
   transition: all 0.3s ease-in-out;
-  background: #9193FF;
+  background: #000000;
   border-radius: 50%;
+  transform: scale(1.1);
 }
 #scroll.fade {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 #scroll img {
-  width: 48px;
-  height: 48px;
+  filter: invert(1);
 }
 #scroll:hover {
   opacity: 1;
 }
 
 h1, h2 {
-  color: #5465FF;
-  font-size: 64px;
+  color: #000000;
+  font-size: 48px;
 }
 
 h2 {
@@ -51,17 +62,19 @@ h2 {
 
 a {
   text-decoration: none;
-  color: #5465FF;
+  color: #000000;
   transition-duration: 0.2s;
 }
 a:hover {
-  color: #003BCB;
+  color: #161616;
 }
 
 /* ^^^ Logo ^^^ */
 #logo {
   z-index: 1;
   position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   margin: 30px 0px 0px 30px;
   align-items: center;
@@ -72,9 +85,11 @@ a:hover {
 }
 #logo p span.name {
   font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -2px;
 }
 #logo p span.footer {
-  letter-spacing: 16.5px;
+  letter-spacing: 15px;
   font-weight: 200;
 }
 #logo p br {
@@ -83,7 +98,7 @@ a:hover {
   margin: -10px;
 }
 #logo:hover {
-  color: #5465FF;
+  color: #303030;
 }
 
 /* ^^^ Top Bar ^^^ */
@@ -92,7 +107,7 @@ a:hover {
   top: 20px;
   right: 40px;
   font-size: 40px;
-  color: #5465FF;
+  color: #303030;
   transition: all 0.2s ease-out;
 }
 .open i, .close i {
@@ -102,7 +117,7 @@ a:hover {
   transition: all 0.2s ease-out;
 }
 .open:hover, .close:hover {
-  color: #003BCB;
+  color: #000000;
 }
 
 .open {
@@ -128,19 +143,19 @@ a:hover {
 #top-bar {
   z-index: 2;
   position: fixed;
-  top: 0;
-  right: 0;
   display: inherit;
   flex-direction: column;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding-top: 20vh;
   width: 30vw;
   height: 100vh;
-  background: #B3CACC40;
-  border-left: 1px solid #B3CACC;
+  background: #d1d1d140;
+  border-left: 1px solid #d1d1d1;
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
   list-style-type: none;
-  margin: 0;
-  padding-top: 20vh;
   transition: all 0.2s ease-out;
 }
 #top-bar li {
@@ -155,7 +170,7 @@ a:hover {
 #bottom-bar {
   width: 100%;
   height: 60vh;
-  background: #B3CACC;
+  background: #d1d1d1;
 }
 #bottom-bar h4 {
   font-size: 22px;
@@ -186,7 +201,8 @@ a:hover {
   filter: brightness(0.6);
 }
 #bottom-bar .find-me div ul li img {
+  position: relative;
   width: 18px;
-  bottom: 0px;
+  bottom: -4px;
   filter: invert(1);
 }/*# sourceMappingURL=basestyle.css.map */

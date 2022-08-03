@@ -1,6 +1,11 @@
 @import './generic';
 
 /* ^^^ Default ^^^ */
+::selection {
+    color: white;
+    background: black;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -24,21 +29,23 @@ body {
     position: fixed;
     right: 32px;
     bottom: 32px;
+    width: 48px;
+    height: 48px;
     cursor: pointer;
-    
+
     opacity: 0.0;
     transition: all 0.3s ease-in-out;
 
-    background: $primary-color-light;
+    background: $primary-color-dark;
     border-radius: 50%;
+    transform: scale(1.1);
     
     &.fade {
-        opacity: 0.3;
+        opacity: 0.5;
     }
 
     img {
-        width: 48px;
-        height: 48px;
+        filter: invert(1);
     }
 
     &:hover {
@@ -47,10 +54,8 @@ body {
 }
 
 h1, h2 {
-    // text-align: center;
-
-    color: $primary-color;
-    font-size: 64px;
+    color: $font-color-dark;
+    font-size: 48px;
 }
 
 h2 {
@@ -59,11 +64,11 @@ h2 {
 
 a {
     text-decoration: none;
-    color: $primary-color;
+    color: $font-color-dark;
     transition-duration: 0.2s;
     
     &:hover {
-        color: $primary-color-dark;
+        color: $primary-color;
     }
 }
 
@@ -71,6 +76,9 @@ a {
 #logo {
     z-index: 1;
     position: fixed;
+    top: 0;
+    left: 0;
+
     display: flex;
     margin: 30px 0px 0px 30px;
     align-items: center;
@@ -84,9 +92,11 @@ a {
         span {
             &.name {
                 font-size: 25px;
+                font-weight: $font-bold;
+                letter-spacing: -2px;
             }
             &.footer {
-                letter-spacing: 16.5px;
+                letter-spacing: 15px;
                 font-weight: $font-extra-light;
             }
         }
@@ -99,7 +109,7 @@ a {
     }
 
     &:hover {
-        color: $primary-color;
+        color: $font-color;
     }
 }
 
@@ -110,7 +120,7 @@ a {
     right: 40px;
 
     font-size: 40px;
-    color: $primary-color;
+    color: $font-color;
     transition: all 0.2s ease-out;
 
     i {
@@ -121,7 +131,7 @@ a {
     }
 
     &:hover {
-        color: $primary-color-dark;
+        color: $font-color-dark;
     }
 
 }
@@ -148,21 +158,20 @@ a {
 #top-bar {
     z-index: 2;
     position: fixed;
-    top: 0;
-    right: 0;
-
     display: inherit;
     flex-direction: column;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding-top: 20vh;
     width: 30vw;
     height: 100vh;
+
     background: #{$secondary-color-dark}40;
     border-left: 1px solid $secondary-color-dark;
     backdrop-filter: blur(12px);
-    
     list-style-type: none;
-    margin: 0;
-    padding-top: 20vh;
-
+    
     li {
         margin: 30px;
         font-size: 2em;
@@ -213,8 +222,9 @@ a {
                     }
 
                     img {
+                        position: relative;
                         width: 18px;
-                        bottom: 0px;
+                        bottom: -4px;
                         filter: invert(1);
                     }
                 }
