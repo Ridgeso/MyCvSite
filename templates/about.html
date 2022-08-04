@@ -9,52 +9,41 @@
     {% comment %} <!-- Block --> {% endcomment %}
     <div id="about">
 
-        {% comment %} <!-- First Info --> {% endcomment %}
-        <div class="my-past page picture" style="--photo:url(./space.jpeg);">
-            <!-- <img src="{% static 'about/pythonlogo.png' %}" alt="Python Logo"> -->
-            <i class="fab fa-python"></i>
-            <h2>Where I started</h2>
-        </div>
-        <div class="my-past content picture" style="--photo:url(./space.jpeg);">
-            <p class="my-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia cumque corporis rem
-                voluptatibus vitae libero aperiam magni earum laudantium praesentium ad porro ratione, dolorum,
-                eius illo dolore recusandae eos? Eligendi, asperiores ipsa ipsam, repellendus quis reprehenderit magnam doloribus, deserunt saepe
-                necessitatibus adipisci suscipit nulla ducimus eaque totam voluptas voluptatibus veniam
-            </p>
-        </div>
-        
-        {% comment %} <!-- Second Info --> {% endcomment %}
-        <div class="my-past page picture" style="--photo:url(./inspiration.jpeg);">
-            <!-- <img src="{% static 'about/htmllogo.png' %}" alt="Python Logo"> -->
-            <i class="fa-solid fa-code"></i>
-            <h2>First struggles</h2>
-        </div>
-        <div class="my-past content picture" style="--photo:url(./inspiration.jpeg);">
-            <p class="my-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia cumque corporis rem
-                voluptatibus vitae libero aperiam magni earum laudantium praesentium ad porro ratione, dolorum,
-                eius illo dolore recusandae eos? Eligendi, asperiores ipsa ipsam, repellendus quis reprehenderit magnam doloribus, deserunt saepe
-                necessitatibus adipisci suscipit nulla ducimus eaque totam voluptas voluptatibus veniam
-            </p>
+        <div class="my-past picture" left>
+            <div>
+                <h6>WHO AM I YOU MAY ASK</h6>
+                <h3 class="gradient-text">I am Jarek Skwarczek</h3>
+                <p>
+                    I started programing few years ago when my firend told me I'll be a bad coder, so I sat down that day
+                    and I got involved 😎
+                </p>
+            </div>
+            <img src="{% static 'about/inspiration.jpeg' %}" style="filter: invert(1) hue-rotate(220deg);" alt="Python Logo">
         </div>
 
-        {% comment %} <!-- Third Info --> {% endcomment %}
-        <div class="my-past page picture" style="--photo:url(./code2.jpeg);">
-            <!-- <img src="{% static 'about/clogo.png' %}" alt="C Logo" style="filter: hue-rotate(300deg);"> -->
-            <!-- <i class="fa-solid fa-code-branch"></i> -->
-            <i class="fa-solid fa-c"></i>
-            <h2>All my knowledge</h2>
+        <div class="my-past picture" right>
+            <img src="{% static 'about/skils.jpg' %}" alt="Python Logo">
+            <div>
+                <h3 class="gradient-text">My Skills</h3>
+                <ul class="my-skills">
+                    <li class="lang"><span class="python">Python</span></li>
+                    <li class="lang"><span class="sql">SQL</span></li>
+                    <li class="lang"><span class="cpp">C/C++</span></li>
+                    <li class="lang"><span class="html">HTML</span></li>
+                    <li class="lang"><span class="office">Excel/Access</span></li>
+                </ul>
+            </div>
         </div>
-        <div class="my-past content picture" style="--photo:url(./code2.jpeg);">
-            <h3>My Skills</h3>
-            <ul class="my-skills">
-                <li class="lang"><span class="python">Python</span></li>
-                <li class="lang"><span class="sql">SQL</span></li>
-                <li class="lang"><span class="cpp">C/C++</span></li>
-                <li class="lang"><span class="html">HTML</span></li>
-                <li class="lang"><span class="office">Excel/Access</span></li>
-            </ul>
+
+        <div class="my-past picture " left>
+            <img src="{% static 'about/bike.jpg' %}" class="left-tranpsarent" alt="Python Logo">
+            <div>
+                <h3 class="gradient-text">HOBBIES</h3>
+                <p>
+                    With great passion I follow movie industry, most of my free time I spend watching 
+                    movies and series.<br>I biggest dream is drive through europ on a motocicle.
+                </p>
+            </div>
         </div>
 
     </div>

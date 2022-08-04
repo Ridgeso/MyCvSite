@@ -12,21 +12,3 @@ Adding another is simple and requires these few steps:
 4. At the end, add this project to InnerGameModel, but title must be the same as game folder
 
 You will figure it out ;)
-
-
-Photos sources:
-https://www.pexels.com/photo/apple-technology-ipad-computer-38568/
-https://www.pexels.com/photo/reach-for-the-and-blue-moon-neon-signages-1510659/
-https://www.pexels.com/photo/blue-universe-956981/
-https://www.pexels.com/photo/coding-script-965345/
-https://www.pexels.com/photo/photo-of-turned-on-laptop-computer-943096/
-https://www.pexels.com/photo/photo-of-person-typing-on-computer-keyboard-735911/
-https://www.pexels.com/photo/person-using-macbook-374720/
-https://www.pexels.com/photo/internet-screen-security-protection-60504/
-https://www.pexels.com/photo/fire-in-the-sky-during-night-time-8252605/
-https://www.pexels.com/photo/coffee-beans-in-white-ceramic-on-brown-wooden-table-1419923/
-https://wallpaperscraft.com/wallpaper/code_programming_text_140050
-https://www.pngegg.com/en/png-nklzm
-https://www.pngegg.com/en/png-bhmms
-https://www.pngegg.com/en/png-htzyx
-https://www.pngegg.com/en/png-sykgh

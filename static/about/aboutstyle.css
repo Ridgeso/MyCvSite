@@ -3,45 +3,64 @@
 /* ^^^ about ^^^ */
 #about {
   display: grid;
-  padding-top: 54px;
-  align-items: center;
-  justify-content: center;
-}
-#about img {
-  width: 130px;
-  padding: 16px 32px;
-  align-items: center;
+  padding-top: 256px;
 }
 
 /* All componets */
 .my-past {
   display: flex;
   position: relative;
-  width: 740px;
-  height: 420px;
-  margin: 40px 32px;
+  margin: 25vh 32px;
   align-items: center;
+}
+.my-past[right] {
+  justify-content: right;
+}
+.my-past[right] div {
+  align-items: flex-end;
+}
+.my-past[right] img {
+  left: 0px;
+}
+.my-past[left] {
+  justify-content: left;
+}
+.my-past[left] div {
+  align-items: flex-start;
+}
+.my-past[left] img {
+  right: 0px;
+}
+.my-past div {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.my-past div h3 {
+  margin: 0;
+  padding: 0px 12px;
+  font-size: 3em;
+}
+.my-past div h6 {
+  margin: 0;
+  width: 80%;
+  display: flex;
   justify-content: center;
-  background: #e0e0e0;
-  border-radius: 16px;
-  box-shadow: 7px 7px 10px 9px #d1d1d1;
-  transition: all 0.2s ease-out;
 }
-.my-past i {
-  font-size: 128px;
-  color: #303030;
-  padding-left: 32px;
+.my-past div p {
+  margin: 0;
+  padding: 0px 12px;
+  background-color: #161616AA;
+  color: #FFFFFF;
+  font-size: 2em;
+  width: 80%;
+  text-align: justify;
 }
-.my-past:hover {
-  box-shadow: 7px 7px 25px 9px #d1d1d1;
-  transform: scale(1.01);
-}
-
-.picture {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+.my-past img {
+  position: absolute;
+  z-index: -1;
+  width: 60%;
+  border-radius: 8px;
 }
 
 @media screen and (max-width: 877px) {
@@ -50,66 +69,9 @@
     flex-wrap: wrap;
   }
 }
-.my-text {
-  padding: 64px;
-  color: #303030;
-  text-align: justify;
-}
-
-/* ^^^ My Past ^^^ */
-.page {
-  background: var(--photo);
-}
-.page img {
-  filter: hue-rotate(300deg);
-}
-
-.content {
-  background: linear-gradient(rgba(0, 0, 0, 0.5019607843), rgba(0, 0, 0, 0.5019607843)), var(--photo);
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* - Skills Levels - */
-h3 {
-  color: #303030;
-  font-size: 64px;
-  margin: 0px;
-}
-
 .my-skills {
-  display: block;
-  position: relative;
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
+  list-style-type: none;
 }
-
-.lang {
-  position: relative;
-  display: block;
-  padding: 0px;
-  margin-bottom: 40px;
-  border-bottom: solid 6px #3030300F;
-}
-.lang span {
-  position: absolute;
-  bottom: -6px;
-  font-size: 28px;
-  border-bottom: solid 6px #000000;
-}
-.lang span.python {
-  width: 50%;
-}
-.lang span.sql {
-  width: 10%;
-}
-.lang span.cpp {
-  width: 15%;
-}
-.lang span.html {
-  width: 20%;
-}
-.lang span.office {
-  width: 60%;
+.my-skills li {
+  margin: 5px;
 }/*# sourceMappingURL=aboutstyle.css.map */

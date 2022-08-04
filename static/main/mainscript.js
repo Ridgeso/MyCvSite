@@ -1,6 +1,6 @@
 function contentAppear() {
     var contentBoxes = document.getElementsByClassName('content-box');
-    var screenPosition = window.innerHeight / 1.2;
+    var screenPosition = window.innerHeight;
     
     for (let box of contentBoxes) {
         var boxPosition = box.getBoundingClientRect().top;
