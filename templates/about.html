@@ -9,7 +9,7 @@
     {% comment %} <!-- Block --> {% endcomment %}
     <div id="about">
 
-        <div class="my-past picture" left>
+        <div class="my-past picture content-appear" right>
             <div>
                 <h6>WHO AM I YOU MAY ASK</h6>
                 <h3 class="gradient-text">I am Jarek Skwarczek</h3>
@@ -21,30 +21,37 @@
             <img src="{% static 'about/inspiration.jpeg' %}" style="filter: invert(1) hue-rotate(220deg);" alt="Python Logo">
         </div>
 
-        <div class="my-past picture" right>
+        <div class="my-past picture" left>
             <img src="{% static 'about/skils.jpg' %}" alt="Python Logo">
             <div>
+                <h6>WHAY DO I KNOW YOU MAY ASK</h6>
                 <h3 class="gradient-text">My Skills</h3>
                 <ul class="my-skills">
-                    <li class="lang"><span class="python">Python</span></li>
-                    <li class="lang"><span class="sql">SQL</span></li>
-                    <li class="lang"><span class="cpp">C/C++</span></li>
-                    <li class="lang"><span class="html">HTML</span></li>
-                    <li class="lang"><span class="office">Excel/Access</span></li>
+                    <li class="lang"><span>@</span></li>
+                    <li class="lang"><span>Python</span></li>
+                    <li class="lang"><span>SQL</span></li>
+                    <li class="lang"><span>C/C++</span></li>
+                    <li class="lang"><span>HTML</span></li>
+                    <li class="lang"><span>Excel/Access</span></li>
                 </ul>
             </div>
         </div>
 
-        <div class="my-past picture " left>
+        <div class="my-past picture " right>
             <img src="{% static 'about/bike.jpg' %}" class="left-tranpsarent" alt="Python Logo">
             <div>
+                <h6>WHAT DO I LIKE YOU MAY ASK</h6>
                 <h3 class="gradient-text">HOBBIES</h3>
                 <p>
                     With great passion I follow movie industry, most of my free time I spend watching 
-                    movies and series.<br>I biggest dream is drive through europ on a motocicle.
+                    movies and series.<br>My biggest dream is drive through europ on a motocicle. 😎
                 </p>
             </div>
         </div>
 
     </div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'about/aboutscript.js'%}"></script>
 {% endblock %}

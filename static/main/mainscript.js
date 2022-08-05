@@ -1,4 +1,4 @@
-function contentAppear() {
+function mainContentAppear() {
     var contentBoxes = document.getElementsByClassName('content-box');
     var screenPosition = window.innerHeight;
     
@@ -11,4 +11,5 @@ function contentAppear() {
     }
 }
 
-window.addEventListener('scroll', contentAppear)
+window.addEventListener('load', mainContentAppear)
+window.addEventListener('scroll', mainContentAppear)

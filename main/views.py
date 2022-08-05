@@ -9,7 +9,7 @@ from games.models import InnerGameModel
 from .forms import ContactModelForm
 
 from .web import Links
-Links.get_urls()
+MyProjects = Links("https://github.com/Ridgeso")
 
 WSGIRequest = Type['WSGIRequest']
 
@@ -35,7 +35,7 @@ def projects_views(request: WSGIRequest) -> HttpResponseRedirect:
     inner = InnerGameModel.objects.all()
     context = {
         "name": obj.title,
-        "projects": Links.link_set,
+        "projects": MyProjects.projects,
         "inner": inner,
     }
     return render(request, "projects.html", context)

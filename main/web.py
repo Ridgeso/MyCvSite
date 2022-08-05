@@ -1,41 +1,58 @@
+from typing import List
+
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 import os
 
 
 class Links:
-    URL = "https://github.com/Ridgeso?tab=repositories"
-    PATH = "https://github.com"
-    README_LEN = 300
-    link_set = []
+    Prefix = "https://github.com"
 
-    def __init__(self, name: str, link: str) -> None:
-        self.name = name
-        self.link = link
-        img_val = self.get_img()
-        self.img = os.path.join("projects", img_val[0])
-        self.img_info = img_val[1]
+    class Project:
+        def __init__(self, name: str, link: str, img: str) -> None:
+            self.name = name
+            self.link = link
+            self.img = img
+        
+        def __repr__(self) -> str:
+            return f"{self.name} - {self.link} - {self.img}\n"
 
-    @classmethod
-    def get_urls(cls) -> None:
-        code = urlopen(cls.URL).read()
+    def __init__(self, profile: str) -> None:
+        if profile.startswith(self.Prefix):
+            self.profile = profile
+            if self.profile[-1] == '/':
+                self.profile = self.profile[:-1]
+        else:
+            self.profile = self.Prefix + '/' + profile
+
+        self.repositories = self.profile + "?tab=repositories"
+
+        self.projects = self.find_projects()
+    
+    def find_projects(self) -> List[Project]:
+        code = urlopen(self.repositories).read()
 
         soup = BeautifulSoup(code, "html.parser")
         links = soup.find_all(class_="wb-break-all")
 
+        projects = []
         for link in links:
             link = link.find("a")
-            rep_name = link.get_text(strip=True)
-            rep_path = cls.PATH + link.get("href")
-            cls.link_set.append(cls(name=rep_name, link=rep_path))
 
-    def get_img(self) -> tuple[str, str]:
+            rep_name = link.get_text(strip=True)
+            rep_path = self.Prefix + link.get("href")
+            rep_img = self.get_image(rep_name)
+
+            project = self.Project(rep_name, rep_path, rep_img)
+            projects.append(project)
+        return projects
+    
+    @staticmethod
+    def get_image(rep_name: str) -> str:
         img_list = os.listdir(os.path.join("static", "projects"))
         
         for img in img_list:
-            if self.name in img:
-                return img, self.name
-        return "Menager.jpeg", "Image cannot be found "
-
-    def __repr__(self) -> str:
-        return f"{self.name} : {self.link}\n{self.text}\n"
+            if rep_name in img:
+                img_name = os.path.join("projects", img)
+                return img_name
+        return "projects/basic.jpg"

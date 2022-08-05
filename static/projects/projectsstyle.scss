@@ -1,7 +1,20 @@
 @import '../generic';
 
+.projects {
+    margin-top:  256px;
+
+    h5 {
+        margin: 0 10%;
+        opacity: 0.7;
+    }
+    h1 {
+        display: inline;
+        margin: 0 10%;
+    }
+}
+
 /* ^^^ Main Block ^^^ */
-#crawl {
+.crawl {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
@@ -13,10 +26,6 @@
     padding: 0px;
     
     justify-items: center;
-
-    h1 {
-        height: 10vh;
-    }
 
     .card {
         display: list-item;
@@ -55,6 +64,7 @@
             width: 100%;
             justify-content: center;
             background: $primary-color;
+            color: $font-color-light;
 
             font-size: 32px;
         }

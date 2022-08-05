@@ -1,7 +1,19 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400;700&display=swap");
+.projects {
+  margin-top: 256px;
+}
+.projects h5 {
+  margin: 0 10%;
+  opacity: 0.7;
+}
+.projects h1 {
+  display: inline;
+  margin: 0 10%;
+}
+
 /* ^^^ Main Block ^^^ */
-#crawl {
+.crawl {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   position: relative;
@@ -11,10 +23,7 @@
   padding: 0px;
   justify-items: center;
 }
-#crawl h1 {
-  height: 10vh;
-}
-#crawl .card {
+.crawl .card {
   display: list-item;
   position: relative;
   width: 450px;
@@ -29,7 +38,7 @@
   list-style-type: none;
   z-index: 1;
 }
-#crawl .card .button {
+.crawl .card .button {
   position: absolute;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -41,16 +50,17 @@
   opacity: 0;
   transition: all 0.2s ease-out 0.1s;
 }
-#crawl .card .name {
+.crawl .card .name {
   display: flex;
   position: absolute;
   bottom: 0;
   width: 100%;
   justify-content: center;
   background: #161616;
+  color: #FFFFFF;
   font-size: 32px;
 }
-#crawl .card::before {
+.crawl .card::before {
   content: "";
   display: block;
   position: absolute;
@@ -61,14 +71,14 @@
   opacity: 0.6;
   transition: all 0.2s ease-out;
 }
-#crawl .card:hover::before {
+.crawl .card:hover::before {
   height: 100%;
   top: 0px;
 }
-#crawl .card:hover .button {
+.crawl .card:hover .button {
   opacity: 1;
 }
-#crawl #bow {
+.crawl #bow {
   position: absolute;
   right: -32%;
   top: 50%;
@@ -82,7 +92,7 @@
   opacity: 0;
   transition: all 0.3s ease-out;
 }
-#crawl #bow.fade {
+.crawl #bow.fade {
   opacity: 1;
   right: -18%;
 }/*# sourceMappingURL=projectsstyle.css.map */

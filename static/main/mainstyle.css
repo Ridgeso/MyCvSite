@@ -7,6 +7,7 @@
   height: 100vh;
   width: 100vw;
   align-items: flex-end;
+  overflow: hidden;
 }
 #introduction .huge-h {
   z-index: -1;
@@ -18,11 +19,21 @@
   color: #FFFFFF;
   text-shadow: 1px 1px 200px #16161620;
 }
+#introduction .blob {
+  z-index: -1;
+  position: absolute;
+  margin: 0px;
+  top: -25%;
+  right: -10%;
+}
 #introduction .wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   width: 100%;
-  height: 50%;
+  height: 60%;
   z-index: 1;
-  padding: 0px 20px;
+  padding: 0px 20px 50px 0;
 }
 #introduction .wrapper .row {
   width: 40%;
@@ -45,14 +56,14 @@
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background: url("./myphoto.png");
   background-size: 60vh;
   background-repeat: no-repeat;
-  background-position: 75% bottom;
-  filter: grayscale(100%) invert(1);
+  background-position: 5% bottom;
+  filter: grayscale(100%);
 }
 
 /* ^^^ Part II ^^^ */
