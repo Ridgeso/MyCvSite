@@ -19,14 +19,26 @@ var openButton = document.querySelector('.open');
 var closeButton = document.querySelector('.close');
 var navBar = document.querySelector('#top-bar');
 
-openButton.onclick = () => {
+function ShowBar() {
     openButton.setAttribute('visible', false);
     closeButton.setAttribute('visible', true);
     navBar.setAttribute('visible', true);
 }
-
-closeButton.onclick = () => {
+function HideBar() {
     closeButton.setAttribute('visible', false);
     openButton.setAttribute('visible', true);
     navBar.setAttribute('visible', false);
 }
+
+openButton.onclick = ShowBar;
+closeButton.onclick = HideBar;
+window.addEventListener('click', (event) => {
+    if (openButton.contains(event.target)) {
+        return;
+    }
+    if (!navBar.contains(event.target)) {
+        if (navBar.getAttribute('visible') === 'true'){
+            HideBar();
+        }
+    }
+})

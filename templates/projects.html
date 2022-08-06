@@ -34,9 +34,8 @@
             {% for project in inner %}
             <div class="card" style="--picture:url({% static project.image_path %});">
                 <div class="button">
-                    <a href="{{ project.get_absolute_url }}"></i><span> GitHub</span> </a>
+                    <a href="{{ project.get_absolute_url }}"><i class="fa-solid fa-gamepad"></i><span> {{ project.title }}</span></a>
                 </div>
-                <!-- <i class="fab fa-python"></i> -->
                 <div class="name"><span>{{ project.title }}</span></div>
             </div>
             {% endfor %}

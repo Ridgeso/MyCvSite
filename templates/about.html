@@ -10,7 +10,8 @@
     <div id="about">
 
         <div class="my-past picture content-appear" right>
-            <div>
+            <img src="{% static 'about/inspiration.jpeg' %}" style="filter: invert(1) hue-rotate(220deg);" alt="Python Logo">
+            <div class="wrapper">
                 <h6>WHO AM I YOU MAY ASK</h6>
                 <h3 class="gradient-text">I am Jarek Skwarczek</h3>
                 <p>
@@ -18,28 +19,65 @@
                     and I got involved 😎
                 </p>
             </div>
-            <img src="{% static 'about/inspiration.jpeg' %}" style="filter: invert(1) hue-rotate(220deg);" alt="Python Logo">
         </div>
 
         <div class="my-past picture" left>
-            <img src="{% static 'about/skils.jpg' %}" alt="Python Logo">
-            <div>
+            <!-- <img src="{% static 'about/skils.jpg' %}" alt="Python Logo"> -->
+            <div class="wrapper">
                 <h6>WHAY DO I KNOW YOU MAY ASK</h6>
                 <h3 class="gradient-text">My Skills</h3>
-                <ul class="my-skills">
-                    <li class="lang"><span>@</span></li>
-                    <li class="lang"><span>Python</span></li>
-                    <li class="lang"><span>SQL</span></li>
-                    <li class="lang"><span>C/C++</span></li>
-                    <li class="lang"><span>HTML</span></li>
-                    <li class="lang"><span>Excel/Access</span></li>
-                </ul>
+                <div class="pins">
+                    <div class="pin" style="--a:0deg; --c1:blue; --c2:yellow;">
+                        <i class="fa-brands fa-python"></i>Python
+                    </div>
+                    <div class="pin" style="--a:0deg; --c1:purple; --c2:cyan;">
+                        <i class="fa-solid fa-microchip"></i>C/C++
+                    </div>
+                    <div class="pin" style="--a:0deg; --c1:#ff1111; --c2:#ff7300;">
+                        <i class="fab fa-github"></i>Git</div>
+                    <div class="pin" style="--a:0deg; --c1:#002fff; --c2:#1875ff;">
+                        <img src="{% static './about/logos/vscode.svg' %}">VS Code
+                    </div>
+                    <div class="pin" style="--a:0deg; --c1:#0084ff; --c2:#18ff52;">
+                        <img src="{% static './about/logos/pycharm.svg' %}" style="filter:invert(1); box-shadow: 0 1px 2px white;"><!-- PyCharm -->
+                    </div>
+                    <div class="pin" style="--a:0deg; --c1:#0072a7; --c2:#4affa5;">
+                        <i class="fa-solid fa-database"></i>SQL
+                    </div>
+                    <div class="pin" style="--a:0deg; --c1:#800080; --c2:#ff4bff;">
+                        <img src="{% static './about/logos/django.svg' %}">Django
+                    </div>
+                    <div class="pin" style="--a:0deg; --c1:#ee5e0b; --c2:#ff8800;">
+                        <i class="fa-brands fa-html5"></i>HTML/CSS
+                    </div>
+                    <div class="pin" style="--a:0deg; --c1:#c3910a; --c2:#ffee00;">
+                        <i class="fa-brands fa-js"></i>JavaScript
+                    </div>
+                    <div class="pin" style="--a:0deg; --c1:#00ffff; --c2:#00a2ff;">
+                        <i class="fa-solid fa-vector-square"></i>OpenGl
+                    </div>
+                </div>
+                <p>
+                    Through past few years mostly I was sticking with Python. Databases like SQL, Web frameworks e.g. Django,
+                    Data manipulation with numpy. While expanding my knowledge I came across C/C++ which I've learned at study.
+                </p>
+            </div>
+        </div>
+        
+        <div class="my-past picture " left>
+            <img src="{% static 'about/skills.jpg' %}" class="left-tranpsarent" alt="Python Logo">
+            <div class="wrapper">
+                <h6>WHAT I AM GOOD AT YOU MAY ASK</h6>
+                <h3 class="gradient-text">ADVANTAGES</h3>
+                <p>
+                    Well, I am absolutly terrible at anything 😢
+                </p>
             </div>
         </div>
 
         <div class="my-past picture " right>
             <img src="{% static 'about/bike.jpg' %}" class="left-tranpsarent" alt="Python Logo">
-            <div>
+            <div class="wrapper">
                 <h6>WHAT DO I LIKE YOU MAY ASK</h6>
                 <h3 class="gradient-text">HOBBIES</h3>
                 <p>

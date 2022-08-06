@@ -99,16 +99,14 @@ a {
     }
  
     p {
-        span {
-            &.name {
-                font-size: 25px;
-                font-weight: $font-bold;
-                letter-spacing: -2px;
-            }
-            &.footer {
-                letter-spacing: 15px;
-                font-weight: $font-extra-light;
-            }
+        .name {
+            font-size: 25px;
+            font-weight: $font-bold;
+            letter-spacing: -2px;
+        }
+        .footer {
+            letter-spacing: 15px;
+            font-weight: $font-extra-light;
         }
     
         br {
@@ -120,6 +118,22 @@ a {
 
     &:hover {
         color: $font-color;
+    }
+}
+
+@include media-sl {
+    #logo {
+        margin: 15px 0 0 15px;
+        
+        p {
+            .name {
+                font-size: 20px;
+            }
+            .footer {
+                font-size: 13px;
+                letter-spacing: 11px;
+            }
+        }
     }
 }
 
@@ -173,8 +187,8 @@ a {
     top: 0;
     right: 0;
     margin: 0;
-    padding-top: 20vh;
-    width: 30vw;
+    padding: 20vh 0 0 0;
+    width: 40%;
     height: 100vh;
 
     background: #{$secondary-color-dark}40;
@@ -183,13 +197,31 @@ a {
     list-style-type: none;
     
     li {
-        margin: 30px;
+        margin: 30px 10%;
         font-size: 2em;
     }
 
     transition: all 0.2s ease-out;
     &[visible='false'] {
         transform: translateX(100%);
+    }
+}
+
+@include media-md {
+    #top-bar {
+        width: 70%;
+    }
+}
+
+@include media-sl {
+    .close, .open {
+        small {
+            display: none;
+        }
+    }
+
+    #top-bar {
+        width: 100%;
     }
 }
 

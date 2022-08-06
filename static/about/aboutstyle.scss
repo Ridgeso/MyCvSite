@@ -11,18 +11,21 @@
     display: flex;
     position: relative;
     
-    margin: 25vh 32px;
+    margin: 128px 32px;
+    min-height: 50vh;
     // opacity: 0.0;
     // transform: translate(0, 100px);
     transition: all 0.5s ease-in-out;
     align-items: center;
+    // overflow: hidden;
 
     &[right] {
         justify-content: right;
-        div {
+        .wrapper {
             align-items: flex-end;
-            h6 {
+            h3, h6 {
                 justify-content: right;
+                text-align: right;
             }
         }
 
@@ -32,13 +35,8 @@
     }
 
     &[left] {
-        justify-content: left;
-        div {
+        .wrapper {
             align-items: flex-start;
-        
-            h6 {
-                justify-content: left;
-            }
         }
 
         img {
@@ -46,23 +44,22 @@
         }
     }
 
-    div {
+    .wrapper {
         display: flex;
         flex-direction: column;
-        width: 60%;
+        width: 100%;
 
-        h3  {
+        h3, h6 {
             margin: 0;
             padding: 0px 12px;
+        }
+
+        h3  {
             font-size: 3em;
         }
 
         h6  {
-            margin: 0;
-            padding: 0px 12px;
             width: 80%;
-            display: flex;
-            // justify-content: flex-end;
         }
 
         p {
@@ -79,7 +76,8 @@
     img {
         position: absolute;
         z-index: -1;
-        width: 60%;
+        max-height: 100%;
+        max-width: 100%;
         border-radius: $border-radius;
     }
 
@@ -89,37 +87,54 @@
     }
 }
 
-@media screen and (max-width: 877px) {
+@include media-md {
     .my-past {
-        display: flex;
-        flex-wrap: wrap;
+        margin: 64px 32px;
+        height: 25vh;
+
+        .wrapper {
+            h3 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
     }
 }
 
-.my-skills {
-    list-style-type: none;
-    width: 100%;
-    margin: 0;
-    padding: 0 12px;
-    
-    li {
-        display: flex;
-        align-items: center;
-    
-        span {
-            margin: 0;
-            padding: 0;
-            width: 15%;
-            margin-right: 5px;
-            text-align: end;
+@include media-sl {
+    .my-past {
+        .wrapper {
+            width: 100%;
         }
+    }
+}
 
-        &::after {
-            content: '';
-            position: relative;
-            height: 4px;
-            width: 60%;
-            background-color: black;
-        }
+
+.pins {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content:space-around;
+    
+    .pin {
+        display: flex;
+
+        margin: 20px;
+        width: 100px;
+        height: 100px;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 16px;
+        background: linear-gradient(var(--a), var(--c1), var(--c2));
+
+        font-weight: $font-bold;
+        color: $font-color-light;
+        text-shadow: 1px 1px 2px black;
+
+        transform: rotateZ(-35deg);
     }
 }

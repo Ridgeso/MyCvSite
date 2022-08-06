@@ -48,3 +48,16 @@ $font-extra-light: 200;
 $font-light: 300;
 $font-medium: 400;
 $font-bold: 700;
+
+
+@mixin media-md {
+    @media only screen and (max-width: 700px) {
+        @content;
+    }
+}
+
+@mixin media-sl {
+    @media only screen and (max-width: 530px) {
+        @content;
+    }
+}
