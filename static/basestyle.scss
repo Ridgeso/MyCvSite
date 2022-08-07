@@ -122,6 +122,15 @@ a {
 }
 
 @include media-sl {
+    #scroll {
+        width: 28px;
+        height: 28px;
+
+        img {
+            width: 28px;
+        }
+    }
+
     #logo {
         margin: 15px 0 0 15px;
         
@@ -233,7 +242,6 @@ a {
     
     h4 {
         font-size: 22px;
-        // font-weight: $font-light;
         margin: 5px 0px;
     }
 
@@ -243,6 +251,7 @@ a {
 
     .find-me {
         display: flex;
+        flex-wrap: wrap;
         position: absolute;
         align-items: flex-start;
         width: 100%;
@@ -269,6 +278,19 @@ a {
                         bottom: -4px;
                     }
                 }
+            }
+        }
+    }
+}
+
+@include media-sl {
+    #bottom-bar {
+        .last-wisper {
+            padding: 20px;
+        }
+        .find-me {
+            div {
+                padding: 0 25px;
             }
         }
     }

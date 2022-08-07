@@ -115,6 +115,13 @@ a:hover {
 }
 
 @media only screen and (max-width: 530px) {
+  #scroll {
+    width: 28px;
+    height: 28px;
+  }
+  #scroll img {
+    width: 28px;
+  }
   #logo {
     margin: 15px 0 0 15px;
   }
@@ -219,6 +226,7 @@ a:hover {
 }
 #bottom-bar .find-me {
   display: flex;
+  flex-wrap: wrap;
   position: absolute;
   align-items: flex-start;
   width: 100%;
@@ -242,4 +250,13 @@ a:hover {
   position: relative;
   width: 18px;
   bottom: -4px;
+}
+
+@media only screen and (max-width: 530px) {
+  #bottom-bar .last-wisper {
+    padding: 20px;
+  }
+  #bottom-bar .find-me div {
+    padding: 0 25px;
+  }
 }/*# sourceMappingURL=basestyle.css.map */

@@ -6,6 +6,10 @@
     padding-top: 256px;
 }
 
+.white-text {
+    color: $secondary-color-light;
+}
+
 /* All componets */
 .my-past {
     display: flex;
@@ -17,7 +21,11 @@
     // transform: translate(0, 100px);
     transition: all 0.5s ease-in-out;
     align-items: center;
-    // overflow: hidden;
+
+    background: var(--picture);
+    background-size: cover;
+    background-position: center;
+    border-radius: $border-radius;
 
     &[right] {
         justify-content: right;
@@ -63,7 +71,7 @@
         }
 
         p {
-            margin: 0;
+            margin: 32px 0px;
             padding: 0px 12px;
             background-color: #{$primary-color}AA;
             color: $font-color-light;
@@ -90,7 +98,7 @@
 @include media-md {
     .my-past {
         margin: 64px 32px;
-        height: 25vh;
+        min-height: 25vh;
 
         .wrapper {
             h3 {
@@ -103,15 +111,6 @@
     }
 }
 
-@include media-sl {
-    .my-past {
-        .wrapper {
-            width: 100%;
-        }
-    }
-}
-
-
 .pins {
     display: flex;
     flex-wrap: wrap;
@@ -122,19 +121,36 @@
         display: flex;
 
         margin: 20px;
-        width: 100px;
+        min-width: 120px;
+        width: auto;
         height: 100px;
 
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
+
 
         border-radius: 16px;
-        background: linear-gradient(var(--a), var(--c1), var(--c2));
+        background: linear-gradient(0deg, var(--c1), var(--c2));
 
         font-weight: $font-bold;
         color: $font-color-light;
         text-shadow: 1px 1px 2px black;
 
         transform: rotateZ(-35deg);
+    }
+}
+
+@include media-sl {
+    .my-past {
+        .wrapper {
+            width: 100%;
+        }
+    }
+
+    .pins {
+        .pin {
+            min-width: 80px;
+            height: 50px;
+        }
     }
 }

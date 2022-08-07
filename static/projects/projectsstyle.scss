@@ -118,3 +118,27 @@
         }
     }
 }
+
+@include media-lg {
+    .crawl {
+        .card {
+            width: 270px;
+            height: 210px;
+
+            .button {
+                font-size: 38px;
+            }
+
+            .name {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+
+@include media-md {
+    .crawl {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

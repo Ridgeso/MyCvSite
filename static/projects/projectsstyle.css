@@ -95,4 +95,22 @@
 .crawl #bow.fade {
   opacity: 1;
   right: -18%;
+}
+
+@media only screen and (max-width: 1060px) {
+  .crawl .card {
+    width: 270px;
+    height: 210px;
+  }
+  .crawl .card .button {
+    font-size: 38px;
+  }
+  .crawl .card .name {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .crawl {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }/*# sourceMappingURL=projectsstyle.css.map */

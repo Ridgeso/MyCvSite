@@ -9,10 +9,11 @@
     {% comment %} <!-- Block --> {% endcomment %}
     <div id="about">
 
-        <div class="my-past picture content-appear" right>
-            <img src="{% static 'about/inspiration.jpeg' %}" style="filter: invert(1) hue-rotate(220deg);" alt="Python Logo">
+        <div class="my-past picture content-appear"
+                right style="--picture:url('/static/about/inspiration.jpeg');">
+            <!-- <img src="{% static 'about/inspiration.jpeg' %}" style="filter: invert(1) hue-rotate(220deg);" alt="Python Logo"> -->
             <div class="wrapper">
-                <h6>WHO AM I YOU MAY ASK</h6>
+                <h6 class="white-text">WHO AM I YOU MAY ASK</h6>
                 <h3 class="gradient-text">I am Jarek Skwarczek</h3>
                 <p>
                     I started programing few years ago when my firend told me I'll be a bad coder, so I sat down that day
@@ -22,39 +23,44 @@
         </div>
 
         <div class="my-past picture" left>
-            <!-- <img src="{% static 'about/skils.jpg' %}" alt="Python Logo"> -->
             <div class="wrapper">
                 <h6>WHAY DO I KNOW YOU MAY ASK</h6>
                 <h3 class="gradient-text">My Skills</h3>
                 <div class="pins">
-                    <div class="pin" style="--a:0deg; --c1:blue; --c2:yellow;">
+                    <div class="pin" style="--c1:blue; --c2:yellow;">
                         <i class="fa-brands fa-python"></i>Python
                     </div>
-                    <div class="pin" style="--a:0deg; --c1:purple; --c2:cyan;">
+                    <div class="pin" style="--c1:purple; --c2:cyan;">
                         <i class="fa-solid fa-microchip"></i>C/C++
                     </div>
-                    <div class="pin" style="--a:0deg; --c1:#ff1111; --c2:#ff7300;">
+                    <div class="pin" style="--c1:#ff1111; --c2:#ff7300;">
                         <i class="fab fa-github"></i>Git</div>
-                    <div class="pin" style="--a:0deg; --c1:#002fff; --c2:#1875ff;">
+                    <div class="pin" style="--c1:#002fff; --c2:#1875ff;">
                         <img src="{% static './about/logos/vscode.svg' %}">VS Code
                     </div>
-                    <div class="pin" style="--a:0deg; --c1:#0084ff; --c2:#18ff52;">
+                    <div class="pin" style="--c1:#0084ff; --c2:#18ff52;">
                         <img src="{% static './about/logos/pycharm.svg' %}" style="filter:invert(1); box-shadow: 0 1px 2px white;"><!-- PyCharm -->
                     </div>
-                    <div class="pin" style="--a:0deg; --c1:#0072a7; --c2:#4affa5;">
+                    <div class="pin" style="--c1:#0072a7; --c2:#4affa5;">
                         <i class="fa-solid fa-database"></i>SQL
                     </div>
-                    <div class="pin" style="--a:0deg; --c1:#800080; --c2:#ff4bff;">
+                    <div class="pin" style="--c1:#800080; --c2:#ff4bff;">
                         <img src="{% static './about/logos/django.svg' %}">Django
                     </div>
-                    <div class="pin" style="--a:0deg; --c1:#ee5e0b; --c2:#ff8800;">
+                    <div class="pin" style="--c1:#ee5e0b; --c2:#ff8800;">
                         <i class="fa-brands fa-html5"></i>HTML/CSS
                     </div>
-                    <div class="pin" style="--a:0deg; --c1:#c3910a; --c2:#ffee00;">
+                    <div class="pin" style="--c1:#c3910a; --c2:#ffee00;">
                         <i class="fa-brands fa-js"></i>JavaScript
                     </div>
-                    <div class="pin" style="--a:0deg; --c1:#00ffff; --c2:#00a2ff;">
+                    <div class="pin" style="--c1:#00ffff; --c2:#00a2ff;">
                         <i class="fa-solid fa-vector-square"></i>OpenGl
+                    </div>
+                    <div class="pin" style="--c1:#614385; --c2:#516395;">
+                        <i class="fa-brands fa-linux"></i>Linux
+                    </div>
+                    <div class="pin" style="--c1:#480048; --c2:#C04848;">
+                        <i class="fa-solid fa-file-circle-plus"></i>(C)Makefile
                     </div>
                 </div>
                 <p>
@@ -64,21 +70,39 @@
             </div>
         </div>
         
-        <div class="my-past picture " left>
-            <img src="{% static 'about/skills.jpg' %}" class="left-tranpsarent" alt="Python Logo">
+        <div class="my-past picture" right>
             <div class="wrapper">
                 <h6>WHAT I AM GOOD AT YOU MAY ASK</h6>
                 <h3 class="gradient-text">ADVANTAGES</h3>
+                
+                <div class="pins">
+                    <div class="pin" style="--c1:#E55D87; --c2:#5FC3E4;">
+                        <i class="fa-solid fa-globe"></i>English
+                    </div>
+                    <div class="pin" style="--c1:red; --c2:white;">
+                        <i class="fa-solid fa-flag"></i>Polish
+                    </div>
+                    <div class="pin" style="--c1:#ff1111; --c2:#ff7300;">
+                        <i class="fa-regular fa-square-check"></i>Attention to details
+                    </div>
+                    <div class="pin" style="--c1:#314755; --c2:#26a0da;">
+                        <i class="fa-solid fa-comment-dots"></i>Communicative
+                    </div>
+                    <div class="pin" style="--c1:#EC6EAD; --c2:#3494E6;">
+                        <i class="fa-solid fa-briefcase"></i>Diligence
+                    </div>
+                </div>
                 <p>
-                    Well, I am absolutly terrible at anything 😢
+                    I am open top criticism so that I can finish task with the best quality.
+                    I know how to create enjoyful environment to build frienlly atmosphere in the work place.
                 </p>
             </div>
         </div>
 
-        <div class="my-past picture " right>
-            <img src="{% static 'about/bike.jpg' %}" class="left-tranpsarent" alt="Python Logo">
+        <div class="my-past picture "
+                right style="--picture:url('./bike.jpg');">
             <div class="wrapper">
-                <h6>WHAT DO I LIKE YOU MAY ASK</h6>
+                <h6 class="white-text">WHAT DO I LIKE YOU MAY ASK</h6>
                 <h3 class="gradient-text">HOBBIES</h3>
                 <p>
                     With great passion I follow movie industry, most of my free time I spend watching 

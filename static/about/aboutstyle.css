@@ -6,6 +6,10 @@
   padding-top: 256px;
 }
 
+.white-text {
+  color: #E0E0E0;
+}
+
 /* All componets */
 .my-past {
   display: flex;
@@ -14,6 +18,10 @@
   min-height: 50vh;
   transition: all 0.5s ease-in-out;
   align-items: center;
+  background: var(--picture);
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
 }
 .my-past[right] {
   justify-content: right;
@@ -50,7 +58,7 @@
   width: 80%;
 }
 .my-past .wrapper p {
-  margin: 0;
+  margin: 32px 0px;
   padding: 0px 12px;
   background-color: #161616AA;
   color: #FFFFFF;
@@ -73,18 +81,13 @@
 @media only screen and (max-width: 700px) {
   .my-past {
     margin: 64px 32px;
-    height: 25vh;
+    min-height: 25vh;
   }
   .my-past .wrapper h3 {
     font-size: 2em;
   }
   .my-past .wrapper p {
     font-size: 20px;
-  }
-}
-@media only screen and (max-width: 530px) {
-  .my-past .wrapper {
-    width: 100%;
   }
 }
 .pins {
@@ -96,14 +99,25 @@
 .pins .pin {
   display: flex;
   margin: 20px;
-  width: 100px;
+  min-width: 120px;
+  width: auto;
   height: 100px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   border-radius: 16px;
-  background: linear-gradient(var(--a), var(--c1), var(--c2));
+  background: linear-gradient(0deg, var(--c1), var(--c2));
   font-weight: 700;
   color: #FFFFFF;
   text-shadow: 1px 1px 2px black;
   transform: rotateZ(-35deg);
+}
+
+@media only screen and (max-width: 530px) {
+  .my-past .wrapper {
+    width: 100%;
+  }
+  .pins .pin {
+    min-width: 80px;
+    height: 50px;
+  }
 }/*# sourceMappingURL=aboutstyle.css.map */
