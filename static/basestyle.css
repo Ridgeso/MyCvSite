@@ -51,15 +51,24 @@ body::-webkit-scrollbar-thumb {
   opacity: 1;
 }
 
-h1, h2 {
+h1 {
+  color: #000000;
+  font-size: 80px;
+}
+
+h2 {
   color: #000000;
   font-size: 48px;
 }
 
-h2 {
-  font-size: 96px;
+@media only screen and (max-width: 530px) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 32px;
+  }
 }
-
 .gradient-text {
   background: linear-gradient(90deg, #FF00CC, #333399);
   -webkit-background-clip: text;

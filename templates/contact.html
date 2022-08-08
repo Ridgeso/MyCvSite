@@ -6,8 +6,9 @@
 {% endblock %}
 
 {% block content %}
+    <h1 class="gradient-text">GET IN TOUCH</h1>
     <div id="input-form">
-        <form method="POST" id="my-form">
+        <form method="POST" class="my-form">
             {% csrf_token %}
             {{ form.as_p }}
             <div class="buttons">
@@ -15,6 +16,26 @@
                 <input type="button" value="Reset" class="btn" onClick="this.form.reset()">
             </div>
         </form>
+        <div class="offer">
+            <h3>What can I possible offer to you?</h3>
+            <h2>Well 😎</h2>
+            <ul class="quality">
+                <li>
+                    <div></div>
+                    <div>Low</div>
+                    <div>Medium</div>
+                    <div>High</div>
+                </li>
+                {% for offer in offers %}
+                <li>
+                    <div>{{ offer }}</div>
+                    <div>_</div>
+                    <div>_</div>
+                    <div>✔️</div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 {% endblock %}
 

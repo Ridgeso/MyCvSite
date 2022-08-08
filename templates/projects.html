@@ -10,7 +10,7 @@
     <div class="projects">
         {% comment %} <!-- Main Site Content --> {% endcomment %}
         <h5>All I WILL EVER ACHIEVE</h5>
-        <h1 class="gradient-text">Case Study</h1>
+        <h2 class="gradient-text">Case Study</h2>
         <div class="crawl">
             {% for project in projects %}
             {% if project.name != "Ridgeso" %}
@@ -29,7 +29,7 @@
     <div class="projects">
         {% comment %} <!-- Inner Projects --> {% endcomment %}
         <h5>USELESS BUT STILL</h5>
-        <h1 class="gradient-text">For Relaxation?</h1>
+        <h2 class="gradient-text">For Relaxation?</h2>
         <div class="crawl">
             {% for project in inner %}
             <div class="card" style="--picture:url({% static project.image_path %});">

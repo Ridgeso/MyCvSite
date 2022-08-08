@@ -47,8 +47,10 @@ def contact_views(request: WSGIRequest) -> HttpResponseRedirect:
     if form.is_valid():
         form.save()
         return HttpResponseRedirect("/")
+
     context = {
         "name": obj.title,
         "form": form,
+        "offers": ['Satisfaction', 'Code quality', 'Punctual employee', 'Workplace atmosphere']
     }
     return render(request, "contact.html", context)

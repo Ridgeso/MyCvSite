@@ -53,13 +53,23 @@ body {
     }
 }
 
-h1, h2 {
+h1 {
+    color: $font-color-dark;
+    font-size: 80px;
+}
+
+h2 {
     color: $font-color-dark;
     font-size: 48px;
 }
 
-h2 {
-    font-size: 96px;
+@include media-sl {
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 32px;
+    }
 }
 
 .gradient-text {

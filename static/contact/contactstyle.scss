@@ -1,28 +1,46 @@
 @import '../generic';
 
+
+h1 {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-top: 128px;
+}
+
 /* Main Style */
 #input-form {
     display: flex;
 
-    width: 100%;
-    height: 100vh;
+    // width: 100vw;
+    min-height: 100vh;
 
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
 
     color: $font-color;
     
-    #my-form {
-        position: relative;
-        
-        p {
-            position: relative;
-            margin: 64px;
-        }
-    }
 }
 
 /* Input Style */
+.my-form {
+    position: relative;
+    width: 50%;
+    
+    margin: 0 32px;
+    padding-bottom: 24px;
+
+    border-radius: $border-radius;
+    box-shadow: 0 0 300px -100px $primary-color;
+        
+    p {
+        position: relative;
+        margin: 64px 32px;
+    }
+}
+
 label {
     position: absolute;
     font-size: 32px;
@@ -69,9 +87,6 @@ label {
         background: $secondary-color-dark;
         width: 24%;
         height: 32px;
-        margin-left: 32px;
-        margin-top: 6px;
-    
         border-radius: 4px;
         outline: none;
         cursor: pointer;
@@ -86,5 +101,78 @@ label {
         &:hover {
             transform: scale(1.2);
         }
+    }
+}
+
+.offer {
+    width: 50%;
+    margin: 0 32px;
+
+    .quality {
+        width: 100%;
+
+        margin: 0; padding: 0;
+        list-style: none;
+
+        li {
+            border-radius: $border-radius;
+            box-shadow: 0 0 20px $secondary-color-dark;
+
+            display: flex;
+            margin-bottom: 10px;
+            padding: 10px;
+
+            justify-content: space-between;
+            align-items: flex-end;
+
+            div {
+                &:nth-child(1) {
+                    flex-basis: 58%;
+                }
+                
+                &:nth-child(2) {
+                    flex-basis: 14%;
+                }
+                
+                &:nth-child(3) {
+                    flex-basis: 14%;
+                }
+                
+                &:nth-child(4) {
+                    flex-basis: 14%;
+                }
+            }
+        
+            &:first-child {
+                background: $primary-color-dark;
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+@include media-lg {
+    .my-form, .offer {
+        margin: 0 8px;
+    }
+    label {
+        font-size: 28px;
+    }
+    .input {
+        padding: 6px;
+    }
+}
+
+@include media-md {
+    #input-form {
+        flex-direction: column;
+    }
+
+    .my-form, .offer {
+        width: calc(100% - 8px*2);
+    }
+
+    .offer {
+        margin-bottom: 32px;
     }
 }
