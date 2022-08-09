@@ -162,7 +162,7 @@ a:hover {
 }
 
 .open {
-  z-index: 1;
+  z-index: 2;
 }
 .open:hover i {
   transform: scaleY(1.2);

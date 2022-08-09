@@ -28,7 +28,6 @@
 }
 #introduction .wrapper {
   display: flex;
-  align-items: flex-end;
   width: 100%;
   height: 60%;
   z-index: 1;
@@ -37,8 +36,11 @@
 #introduction .wrapper .row {
   width: 60%;
 }
-#introduction .wrapper .row h1, #introduction .wrapper .row h5, #introduction .wrapper .row p {
+#introduction .wrapper .row h2, #introduction .wrapper .row h5, #introduction .wrapper .row p {
   margin: 15px 0;
+}
+#introduction .wrapper .row h2 {
+  display: inline-block;
 }
 #introduction .wrapper .row h5 {
   font-size: 15px;
@@ -53,13 +55,116 @@
   #introduction .wrapper .row {
     width: 100%;
   }
+  #introduction .blob {
+    top: -30%;
+  }
 }
 @media only screen and (max-width: 530px) {
-  #introduction .wrapper .row h1 {
+  #introduction .wrapper .row h2 {
     font-size: 36px;
   }
   #introduction .wrapper .row p {
     font-size: 18px;
+  }
+}
+/* ^^^ Case study ^^^ */
+.case-study {
+  padding: 0 32px;
+}
+.case-study h2, .case-study h5 {
+  margin: 10px 14px;
+}
+.case-study h2 {
+  display: inline-block;
+}
+.case-study h5 {
+  font-size: 15px;
+  letter-spacing: 5px;
+  opacity: 0.8;
+  opacity: 0.7;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 64px 0 28px 0;
+  padding: 0px;
+  justify-items: center;
+}
+.projects .card {
+  position: relative;
+  width: calc(50% - 28px);
+  height: 550px;
+  margin: 14px;
+  overflow: hidden;
+  background: var(--picture);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 5px 10px #D1D1D1;
+  border-radius: 8px;
+  list-style-type: none;
+  z-index: 1;
+}
+.projects .card a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.projects .card a .name {
+  display: inline-block;
+  margin: 10% 10% 0 10%;
+  color: #000000;
+  font-weight: 700;
+  font-size: 48px;
+}
+.projects .card a .white {
+  color: #FFFFFF;
+}
+.projects .card a .footer {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  right: 5%;
+  bottom: 5%;
+  font-size: 22px;
+  opacity: 0;
+  transition: all 0.2s ease-out 0.1s;
+}
+.projects .card::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  bottom: 0px;
+  background: #E0E0E0;
+  opacity: 0.3;
+  transition: all 0.2s ease-out;
+}
+.projects .card:hover::before {
+  height: 100%;
+  top: 0px;
+}
+.projects .card:hover a .footer {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 700px) {
+  .projects .card a .name {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .projects {
+    flex-direction: column;
+  }
+  .projects .card {
+    margin: 14px 0px;
+    width: 100%;
   }
 }
 /* ^^^ Part II ^^^ */
