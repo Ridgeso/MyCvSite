@@ -1,80 +1,91 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400;700&display=swap");
 .projects {
-  margin-top: 256px;
+  margin: 128px 0;
+}
+.projects h2, .projects h5 {
+  display: inline-block;
+  position: relative;
+  left: 50px;
+  margin: 10px 0;
 }
 .projects h5 {
-  margin: 0 10%;
   opacity: 0.7;
 }
-.projects h2 {
-  display: inline;
-  margin: 0 10%;
+.projects:first-of-type {
+  margin-top: 256px;
 }
 
 /* ^^^ Main Block ^^^ */
 .crawl {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   position: relative;
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
-  justify-items: center;
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
 }
 .crawl .card {
-  display: flex;
-  z-index: 1;
   position: relative;
-  width: 450px;
-  height: 350px;
-  margin: 40px;
+  width: 110%;
+  margin: 128px 0;
+  padding: 88px;
+  right: -100%;
   background: var(--picture);
-  background-size: cover;
   background-position: center;
-  justify-content: center;
-  align-items: center;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: all 0.5s ease-out;
+  border-radius: 8px;
 }
-.crawl .card .button {
+.crawl .card a {
   position: absolute;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  left: 50%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.crawl .card a .name, .crawl .card a .button {
+  position: absolute;
   top: 50%;
+  transform: translateY(-50%);
+  padding: 0 10px;
+  background: #1616168F;
+  border-radius: 8px;
+  font-size: 40px;
+  color: #FFFFFF;
+}
+.crawl .card a .name {
+  display: inline-block;
+  left: 40px;
+}
+.crawl .card a .button {
+  width: auto;
+  left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 48px;
   opacity: 0;
   transition: all 0.2s ease-out 0.1s;
 }
-.crawl .card .name {
-  display: inline-block;
-  color: #000000;
+.crawl .card:hover a .button {
   opacity: 1;
-  transition: all 0.1s ease-in;
-  font-size: 48px;
 }
-.crawl .card:hover .name {
-  opacity: 0;
+.crawl .card.onShow {
+  right: -50px;
+  transition: all 0.2s ease-out;
 }
-.crawl .card:hover .button {
-  opacity: 1;
+.crawl .card.onShow:hover {
+  right: -25px;
 }
 
-@media only screen and (max-width: 1060px) {
-  .crawl .card {
-    width: 270px;
-    height: 210px;
+@media only screen and (max-width: 530px) {
+  .crawl .card a .name {
+    font-size: 28px;
   }
-  .crawl .card .button {
-    font-size: 38px;
+  .crawl .card a .button {
+    transform: translate(0, 0);
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
   }
-  .crawl .card .name {
-    font-size: 22px;
-  }
-}
-@media only screen and (max-width: 700px) {
-  .crawl {
-    grid-template-columns: repeat(1, 1fr);
+  .crawl .card:hover a .name {
+    opacity: 1;
   }
 }/*# sourceMappingURL=projectsstyle.css.map */

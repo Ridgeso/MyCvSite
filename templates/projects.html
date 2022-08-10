@@ -1,5 +1,6 @@
 {% extends 'index.html' %}
 {% load static %}
+{% load filters %}
 
 {% block header %}
     <link rel="stylesheet" href="{% static 'projects/projectsstyle.css' %}" type="text/css">
@@ -7,37 +8,47 @@
 
 {% block content %}
 
+    {% comment %} <!-- Main Site Content --> {% endcomment %}
     <div class="projects">
-        {% comment %} <!-- Main Site Content --> {% endcomment %}
         <h5>All I WILL EVER ACHIEVE</h5>
-        <h2 class="gradient-text">Case Study</h2>
-        <div class="crawl">
+        <br>
+        <h2 class="gradient-text">My public activity</h2>
+        <ul class="crawl">
             {% for project in projects %}
+            
             {% if project.name != "Ridgeso" %}
-            <div class="card" style="--picture:url({% static project.img %});">
-                <span class="name">{{ project.name }}</span>
-                <a class="button" href="{{ project.link }}" target="_blank"> <i class="fab fa-github"></i><span> GitHub</span> </a>
-            </div>
+            
+            {% with temp=forloop.counter0|mod:back_counter %}
+            <li class="card" style="--picture:url({{ './back{}.jpg'|format:temp }});">
+                {% endwith %}
+                <a href="{{ project.link }}" target="_blank">
+                    <span class="button"><i class="fab fa-github"></i> GitHub</span>
+                    <span class="name">{{ project.name }}</span>
+                </a>
+            </li>
             {% endif %}
+
             {% endfor %}
-        </div>
+        </ul>
     </div>
 
+
+    {% comment %} <!-- Inner Projects --> {% endcomment %}
     <div class="projects">
-        {% comment %} <!-- Inner Projects --> {% endcomment %}
         <h5>USELESS BUT STILL</h5>
+        <br>
         <h2 class="gradient-text">For Relaxation?</h2>
-        <div class="crawl">
+        <ul class="crawl">
             {% for project in inner %}
-            <div class="card" style="--picture:url({% static project.image_path %});">
-                <div class="button">
-                    <a href="{{ project.get_absolute_url }}"><i class="fa-solid fa-gamepad"></i><span> Play<span></a>
-                </div>
-                <div class="name"><span>{{ project.title }}</span></div>
-            </div>
+            <li class="card" style="--picture:url({% static project.image_path %});">
+                <a href="{{ project.get_absolute_url }}">
+                    <span class="button"><i class="fa-solid fa-gamepad"></i> Play</span>
+                    <span class="name">{{ project.title }}</span>
+                </a>
+            </li>
             {% endfor %}
             <div id="bow"></div>
-        </div>
+        </ul>
     </div>
 {% endblock %}
 

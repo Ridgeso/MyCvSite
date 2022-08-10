@@ -1,3 +1,13 @@
+// Main scroll animatio 
+function showBoxOnScroll(box, showOnHeight, className) {
+    var screenPosition = window.innerHeight * showOnHeight;
+    var boxPosition = box.getBoundingClientRect().top;
+
+    if (boxPosition < screenPosition) {
+        box.classList.add(className);
+    }
+}
+
 // Get Scroll Button
 var scrollButton = document.getElementById("scroll");
 

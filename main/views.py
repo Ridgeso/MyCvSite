@@ -37,6 +37,7 @@ def projects_views(request: WSGIRequest) -> HttpResponseRedirect:
         "name": obj.title,
         "projects": MyProjects.projects,
         "inner": inner,
+        "back_counter": 4
     }
     return render(request, "projects.html", context)
 

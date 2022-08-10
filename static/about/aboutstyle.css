@@ -16,6 +16,8 @@
   position: relative;
   margin: 128px 32px;
   min-height: 50vh;
+  opacity: 0;
+  transform: translate(0, 100px);
   transition: all 0.5s ease-in-out;
   align-items: center;
   background: var(--picture);
