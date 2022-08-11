@@ -204,6 +204,7 @@
   font-size: 64px;
   transition: all 0.2s ease-out;
   background: rgba(0, 0, 0, 0.5333333333);
+  border-radius: 8px;
 }
 #main-block .content-box a span:hover {
   box-shadow: -7px 7px 25px #D1D1D1;

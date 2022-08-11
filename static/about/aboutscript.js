@@ -2,7 +2,7 @@ function aboutContentAppear() {
     var contentBoxes = document.getElementsByClassName('my-past');
     
     for (let box of contentBoxes) {
-        showBoxOnScroll(box, 0.9, 'content-appear');
+        showBoxOnScroll(box, 0.85, 'content-appear');
     }
 }
 

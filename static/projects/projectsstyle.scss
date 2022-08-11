@@ -23,25 +23,27 @@
 .crawl {
     position: relative;
 
+    margin: 90px 0;
+    padding: 38px 0;
+    
     list-style-type: none;
-    padding: 0;
     overflow: hidden;
 
     .card {
         position: relative;
 
         width: 110%;
-        margin: 128px 0;
-        padding: calc(40px + 48px);
-
-        right: -100%;
+        margin: 0 0 -32px 0;
+        padding: 256px calc(40px + 48px);
+        top: -10%;
 
         background: var(--picture);
         background-position: center;
         background-size: cover;
-        background-attachment: fixed;
-        transition: all 0.5s ease-out;
+        // background-attachment: fixed;
         border-radius: $border-radius;
+        box-shadow: 1px -1px 10px $primary-color;
+        // transition: all 0.5s ease-out;
 
         a {
             position: absolute;
@@ -51,48 +53,38 @@
 
             .name, .button {
                 position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
                 padding: 0 10px;
 
                 background: #{$primary-color}8F;
                 border-radius: $border-radius;
-                font-size: 40px;
                 color: $font-color-light;
             }
 
             .name {
                 display: inline-block;
                 
+                top: 50%;
                 left: 40px;
+                transform: translateY(-50%);
+                font-size: 40px;
             }
 
             .button {
-                width:auto;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                width: auto;
+                top: 10px;
+                left: 10px;
                 
+                font-size: 32px;
                 opacity: 0;
                 transition: all 0.2s ease-out 0.1s;
             }
         }
 
         &:hover {
-            // right: -25px;
-
             a {
                 .button {
                     opacity: 1;
                 }
-            }
-        }
-
-        &.onShow {
-            right: -50px;
-            transition: all 0.2s ease-out;
-
-            &:hover {
-                right: -25px;
             }
         }
     }
@@ -101,15 +93,13 @@
 @include media-sl {
     .crawl {
         .card {
+            padding: 128px 0;
             a {
                 .name {
                     font-size: 28px;
                 }
 
                 .button {
-                    transform: translate(0, 0);
-                    top: 10px;
-                    left: 10px;
                     font-size: 12px;
                 }
             }

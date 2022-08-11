@@ -1,20 +1,3 @@
-// $primary-color: #F71735;
-// $primary-color-light: #FF5F5F;
-// $primary-color-dark: #BB000E;
-// $secondary-color: #0F0F0F;
-// $secondary-color-light: #353535;
-// $secondary-color-dark: #000000;
-// $font-color: #FCFAEF;
-
-
-// $primary-color: #5465FF;
-// $primary-color-light: #9193FF;
-// $primary-color-dark: #003BCB;
-
-// $secondary-color: #E5FDFF;
-// $secondary-color-light: #FFFFFF;
-// $secondary-color-dark: #B3CACC;
-
 $primary-color: #161616;
 $primary-color-light: #303030;
 $primary-color-dark: #000000;
@@ -22,26 +5,14 @@ $secondary-color: #FFFFFF;
 $secondary-color-light: #E0E0E0;
 $secondary-color-dark: #D1D1D1;
 
-    
-// $primary-color: #000;
-// $primary-color-light: #000;
-// $primary-color-dark: #000;
-// $secondary-color: #FFF;
-// $secondary-color-light: #FFF;
-// $secondary-color-dark: rgb(223, 223, 223);
-
-
-// $font-color: #000000;
 $font-color: #303030;
 $font-color-light: #FFFFFF;
 $font-color-dark: #000000;
-$font-gradient: linear-gradient(90deg, #FF00CC, #333399); // #ff512f, #dd2476);
+$font-gradient: linear-gradient(90deg, #FF00CC, #333399);
 $border-radius: 8px;
 
 
 /* FONTS */
-// @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
-// $font-family: 'Comfortaa', cursive;
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400;700&display=swap');
 $font-family: 'IBM Plex Sans Arabic', sans-serif;
 $font-extra-light: 200;

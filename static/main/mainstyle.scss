@@ -266,6 +266,7 @@
                 font-size: 64px;
                 transition: all 0.2s ease-out;
                 background: #0008;
+                border-radius: $border-radius;
 
                 &:hover {
                     box-shadow: -7px 7px 25px $secondary-color-dark;

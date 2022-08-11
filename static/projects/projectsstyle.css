@@ -19,22 +19,22 @@
 /* ^^^ Main Block ^^^ */
 .crawl {
   position: relative;
+  margin: 90px 0;
+  padding: 38px 0;
   list-style-type: none;
-  padding: 0;
   overflow: hidden;
 }
 .crawl .card {
   position: relative;
   width: 110%;
-  margin: 128px 0;
-  padding: 88px;
-  right: -100%;
+  margin: 0 0 -32px 0;
+  padding: 256px 88px;
+  top: -10%;
   background: var(--picture);
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
-  transition: all 0.5s ease-out;
   border-radius: 8px;
+  box-shadow: 1px -1px 10px #161616;
 }
 .crawl .card a {
   position: absolute;
@@ -45,44 +45,38 @@
 }
 .crawl .card a .name, .crawl .card a .button {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   padding: 0 10px;
   background: #1616168F;
   border-radius: 8px;
-  font-size: 40px;
   color: #FFFFFF;
 }
 .crawl .card a .name {
   display: inline-block;
+  top: 50%;
   left: 40px;
+  transform: translateY(-50%);
+  font-size: 40px;
 }
 .crawl .card a .button {
   width: auto;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 10px;
+  left: 10px;
+  font-size: 32px;
   opacity: 0;
   transition: all 0.2s ease-out 0.1s;
 }
 .crawl .card:hover a .button {
   opacity: 1;
 }
-.crawl .card.onShow {
-  right: -50px;
-  transition: all 0.2s ease-out;
-}
-.crawl .card.onShow:hover {
-  right: -25px;
-}
 
 @media only screen and (max-width: 530px) {
+  .crawl .card {
+    padding: 128px 0;
+  }
   .crawl .card a .name {
     font-size: 28px;
   }
   .crawl .card a .button {
-    transform: translate(0, 0);
-    top: 10px;
-    left: 10px;
     font-size: 12px;
   }
   .crawl .card:hover a .name {
