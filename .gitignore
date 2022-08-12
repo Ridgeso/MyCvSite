@@ -26,3 +26,4 @@ secure.txt
 **/*.svg
 **/*.jpg
 **/*.jpeg
+**/private.py

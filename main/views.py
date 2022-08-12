@@ -1,8 +1,7 @@
 from typing import Type
 
-from django import forms
-from django.forms.models import ModelForm
 from django.shortcuts import render, HttpResponseRedirect
+from django.core.mail import send_mail
 
 from .models import PageInfo
 from games.models import InnerGameModel
@@ -46,7 +45,21 @@ def contact_views(request: WSGIRequest) -> HttpResponseRedirect:
     obj = PageInfo.objects.get(page_name="contact")
     form = ContactModelForm(request.POST or None)
     if form.is_valid():
-        form.save()
+        print(form.data)
+        send_mail(
+            "[WOROK]: " + form.data['title'],
+            f"{form.data['name']} sends message\n{form.data['email']} <- contact back\n\nMessage:\n{form.data['message']}",
+            "jarskwarczek@gmail.com",
+            ["jarskwarczek@gmail.com"],
+            fail_silently=False
+        )
+        send_mail(
+            "Thanks for texting Me!",
+            f"Hey {form.data['name']}\n\nI am so glad you wrote to me. I will send back as soon I read your message.\n\n Best Regards Jarosław Skwarczek",
+            "jarskwarczek@gmail.com",
+            [form.data['email']],
+            fail_silently=False
+        )
         return HttpResponseRedirect("/")
 
     context = {

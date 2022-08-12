@@ -1,8 +1,6 @@
 from django import forms
 from django.forms import fields
 
-from .models import MessagesModel
-
 
 class ContactModelForm(forms.ModelForm):
     name = fields.CharField(
@@ -12,7 +10,8 @@ class ContactModelForm(forms.ModelForm):
                 "class": "input name",
                 "id": False
             }
-        )
+        ),
+        required=True
     )
     email = fields.CharField(
         label="E-Mail",
@@ -22,7 +21,8 @@ class ContactModelForm(forms.ModelForm):
                 "class": "input email",
                 "id": False
             }
-        )
+        ),
+        required=True
     )
     title = fields.CharField(
         max_length=21,
@@ -31,7 +31,8 @@ class ContactModelForm(forms.ModelForm):
                 "class": "input title",
                 "id": False
             }
-        )
+        ),
+        required=True
     )
     message = fields.CharField(
         widget=forms.Textarea(
@@ -41,9 +42,6 @@ class ContactModelForm(forms.ModelForm):
                 "cols": 100,
                 "rows": 20
             }
-        )
+        ),
+        required=True
     )
-
-    class Meta:
-        model = MessagesModel
-        fields = ["name", "email", "title", "message"]
