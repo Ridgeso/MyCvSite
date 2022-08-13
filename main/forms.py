@@ -2,7 +2,7 @@ from django import forms
 from django.forms import fields
 
 
-class ContactModelForm(forms.ModelForm):
+class ContactForm(forms.Form):
     name = fields.CharField(
         max_length=31,
         widget=forms.TextInput(

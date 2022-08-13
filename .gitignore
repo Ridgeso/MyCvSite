@@ -20,10 +20,7 @@ secure.txt
 /.idea
 
 #files
-/static/colors*.png
+.env
+/trash
 **/*.css.map
-**/*.png
-**/*.svg
-**/*.jpg
-**/*.jpeg
 **/private.py

@@ -4,8 +4,8 @@ from django.shortcuts import render, HttpResponseRedirect
 from django.core.mail import send_mail
 
 from .models import PageInfo
-from games.models import InnerGameModel
-from .forms import ContactModelForm
+from games.models import  Games
+from .forms import ContactForm
 
 from .web import Links
 MyProjects = Links("https://github.com/Ridgeso")
@@ -31,11 +31,10 @@ def about_views(request: WSGIRequest) -> HttpResponseRedirect:
 
 def projects_views(request: WSGIRequest) -> HttpResponseRedirect:
     obj = PageInfo.objects.get(page_name="projects")
-    inner = InnerGameModel.objects.all()
     context = {
         "name": obj.title,
         "projects": MyProjects.projects,
-        "inner": inner,
+        "games": Games,
         "back_counter": 4
     }
     return render(request, "projects.html", context)
@@ -43,11 +42,10 @@ def projects_views(request: WSGIRequest) -> HttpResponseRedirect:
 
 def contact_views(request: WSGIRequest) -> HttpResponseRedirect:
     obj = PageInfo.objects.get(page_name="contact")
-    form = ContactModelForm(request.POST or None)
+    form = ContactForm(request.POST or None)
     if form.is_valid():
-        print(form.data)
         send_mail(
-            "[WOROK]: " + form.data['title'],
+            "[WORK]: " + form.data['title'],
             f"{form.data['name']} sends message\n{form.data['email']} <- contact back\n\nMessage:\n{form.data['message']}",
             "jarskwarczek@gmail.com",
             ["jarskwarczek@gmail.com"],

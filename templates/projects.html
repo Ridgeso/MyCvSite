@@ -39,11 +39,11 @@
         <br>
         <h2 class="gradient-text">For Relaxation?</h2>
         <ul class="crawl">
-            {% for project in inner %}
-            <li class="card" style="--picture:url({% static project.image_path %});">
-                <a href="{{ project.get_absolute_url }}">
+            {% for game in games %}
+                <li class="card" style="--picture:url({% static game.img %});">
+                <a href="{{ game.url }}">
                     <span class="button"><i class="fa-solid fa-gamepad"></i> Play</span>
-                    <span class="name">{{ project.title }}</span>
+                    <span class="name">{{ game.title }}</span>
                 </a>
             </li>
             {% endfor %}

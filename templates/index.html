@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pl-PL en-US">
 {% comment %} <!-- HEAD OF THE SITE --> {% endcomment %}
@@ -5,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     
-    {% load static %}
+    <link rel="icon" href="{% static 'favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'basestyle.css' %}" type="text/css">
     {% block header %}
     {% endblock %}
@@ -16,7 +18,7 @@
 {% comment %} <!-- BODY OF THE SITE --> {% endcomment %}
 <body>
     <a id="logo" href="/">
-        <img src="{% static 'temporary.svg' %}">
+        <img src="{% static 'person.svg' %}">
         <p>
             <span class="name">JAREK SKWARCZEK</span>
             <br>

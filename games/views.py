@@ -1,6 +1,5 @@
 from typing import Type
 
-from io import SEEK_CUR
 from django.shortcuts import render
 import os
 
