@@ -13,14 +13,9 @@
 # env
 **/djangoenv
 
-# pass
-secure.txt
-
 # IDE
 /.idea
 
 #files
-.env
 /trash
 **/*.css.map
-**/private.py

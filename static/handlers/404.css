@@ -1,0 +1,21 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400;700&display=swap");
+h1, h2 {
+  display: flex;
+  width: 100vw;
+  height: 30vh;
+  margin: 0;
+  justify-content: center;
+  background: linear-gradient(90deg, #c0a8be, #8c8dad);
+}
+
+h1 {
+  align-items: flex-end;
+}
+h1 span {
+  transform: rotateZ(-45deg) translate(-15px, 15px);
+}
+
+h2 {
+  align-items: flex-start;
+}/*# sourceMappingURL=404.css.map */

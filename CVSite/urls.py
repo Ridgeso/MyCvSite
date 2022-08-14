@@ -24,3 +24,6 @@ urlpatterns = [
     path("", include("main.urls"), name="index"),
     path("projects/", include("games.urls"), name="projects")
 ]
+
+
+handler404 = 'main.views.handler404'

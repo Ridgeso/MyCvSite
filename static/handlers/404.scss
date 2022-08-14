@@ -1,0 +1,25 @@
+@import '../generic';
+
+h1, h2 {
+    display: flex;
+    
+    width: 100vw;
+    height: 30vh;
+    margin: 0;
+
+    justify-content: center;
+
+    background: linear-gradient(90deg, #c0a8be, #8c8dad);
+}
+
+h1 {
+    align-items: flex-end;
+
+    span {
+        transform: rotateZ(-45deg) translate(-15px, 15px);
+    }
+}
+
+h2 {
+    align-items: flex-start;
+}

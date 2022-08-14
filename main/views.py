@@ -66,3 +66,12 @@ def contact_views(request: WSGIRequest) -> HttpResponseRedirect:
         "offers": ['Satisfaction', 'Code quality', 'Punctual employee', 'Workplace atmosphere']
     }
     return render(request, "contact.html", context)
+
+
+def handler404(request: WSGIRequest, *args, **kwargs):
+    title = "404"
+    response = render(request, "404.html", {
+        "name": title
+    })
+    response.status_code = 404
+    return response
