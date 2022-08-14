@@ -1,24 +1,19 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="pl-PL en-US">
-{% comment %} <!-- HEAD OF THE SITE --> {% endcomment %}
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     
-    <link rel="icon" href="{% static 'favicon.ico' %}">
-    <link rel="stylesheet" href="{% static 'basestyle.css' %}" type="text/css">
-    {% block header %}
-    {% endblock %}
+    <link rel="icon" href="../static/favicon.ico">
+    <link rel="stylesheet" href="../static/basestyle.css" type="text/css">
+    <link rel="stylesheet" href="./gamestyle.css' %}" type="text/css">
 
-    <title>{{ name }}</title>
+    <title>Snake</title>
 
 </head>
-{% comment %} <!-- BODY OF THE SITE --> {% endcomment %}
 <body>
-    <a id="logo" href="/">
-        <img src="{% static 'person.svg' %}">
+    <a id="logo" href="../index.html">
+        <img src="../static/person.svg">
         <p>
             <span class="name">JAREK SKWARCZEK</span>
             <br>
@@ -26,22 +21,24 @@
         </p>
     </a>
 
-    {% comment %} <!-- Top Bar --> {% endcomment %}
     <span class="open"  visible="true" ><small>Menu</small><i class="fa-solid fa-bars" ></i></span>
     <span class="close" visible="false"><small>Close</small><i class="fa-solid fa-xmark"></i></span>
     <ul id="top-bar" visible="false">
-        <li><a href="/about/"><b>00 </b><span>About Me</span></a></li>
-        <li><a href="/projects/"><b>01 </b><span>My Projects</span></a></li>
-        <li><a href="/contact/"><b>02 </b><span>Contact</span></a></li>
+        <li><a href="../about.html"><b>00 </b><span>About Me</span></a></li>
+        <li><a href="../projects.html"><b>01 </b><span>My Projects</span></a></li>
+        <li><a href="../contact.html"><b>02 </b><span>Contact</span></a></li>
         <li><a href="https://github.com/Ridgeso" target="_blank"><b>03 </b><span>GitHub</span></a></li>
     </ul>
 
-    {% comment %} <!-- Main Block --> {% endcomment %}
-    {% block content %}
+    <div class="window">
+        <canvas></canvas>
+        <script src="./canvas.js"></script>
+        <p>Keyboard inputs: a-left d-right s-down w-up enter-reset</p>
+        <script src="./snake/snake.js"></script>
+        <script src="./snake/main.js"></script>
+    </div>
 
-    {% endblock %}
 
-    {% comment %} <!-- Bottom Bar --> {% endcomment %}
     <footer id="bottom-bar">
         <div class="last-wisper">
             <h4>-- Contact Informations --</h4>
@@ -49,17 +46,14 @@
         </div>
         <div class="find-me">
             <div>
-                {% comment %} <!-- Informations --> {% endcomment %}
                 <h4>Follow Me On:</h4>
                 <ul>
-                    <!-- <i class="fa-brands fa-square-github"></i> -->
                     <li><a href="https://github.com/Ridgeso" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-                    <li><a href="https://www.codewars.com/users/Ridgeso" target="_blank"><img src="{% static 'codewars.svg' %}"> CodeWars</a></li>
+                    <li><a href="https://www.codewars.com/users/Ridgeso" target="_blank"><img src="../static/codewars.svg"> CodeWars</a></li>
                 </ul>
             </div>
             
             <div>
-                {% comment %} <!-- A little more info --> {% endcomment %}
                 <h4>Contact</h4>
                 <ul>
                     <li><span>P: </span>123 456 789</li>
@@ -69,11 +63,9 @@
         </div>
     </footer>
 
-    <div id="scroll"><img src="{% static 'arrowup.png' %}" alt="Scroll button"></div>
+    <div id="scroll"><img src="../static/arrowup.png" alt="Scroll button"></div>
 
     <script type="text/javascript" src="https://kit.fontawesome.com/3f7224d645.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{% static 'basescript.js'%}"></script>
-    {% block scripts %}
-    {% endblock %}
+    <script type="text/javascript" src="../static/basescript.js"></script>
 </body>
 </html>

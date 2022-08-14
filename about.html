@@ -1,17 +1,40 @@
-{% extends 'index.html' %}
-{% load static %}
+<!DOCTYPE html>
+<html lang="pl-PL en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <link rel="icon" href="./static/favicon.ico">
+    <link rel="stylesheet" href="./static/basestyle.css" type="text/css">
 
-{% block header %}
-    <link rel="stylesheet" href="{% static 'about/aboutstyle.css' %}" type="text/css">
-{% endblock %}
+    <link rel="stylesheet" href="./static/about/aboutstyle.css" type="text/css">
 
-{% block content %}
-    {% comment %} <!-- Block --> {% endcomment %}
+    <title>About Me</title>
+
+</head>
+<body>
+    <a id="logo" href="./index.html">
+        <img src="./static/person.svg">
+        <p>
+            <span class="name">JAREK SKWARCZEK</span>
+            <br>
+            <span class="footer">PROGRAMER</span>
+        </p>
+    </a>
+
+    <span class="open"  visible="true" ><small>Menu</small><i class="fa-solid fa-bars" ></i></span>
+    <span class="close" visible="false"><small>Close</small><i class="fa-solid fa-xmark"></i></span>
+    <ul id="top-bar" visible="false">
+        <li><a href="./about.html"><b>00 </b><span>About Me</span></a></li>
+        <li><a href="./projects.html"><b>01 </b><span>My Projects</span></a></li>
+        <li><a href="./contact.html"><b>02 </b><span>Contact</span></a></li>
+        <li><a href="https://github.com/Ridgeso" target="_blank"><b>03 </b><span>GitHub</span></a></li>
+    </ul>
+
     <div id="about">
 
         <div class="my-past picture"
-                right style="--picture:url('/static/about/inspiration.jpeg');">
-            <!-- <img src="{% static 'about/inspiration.jpeg' %}" style="filter: invert(1) hue-rotate(220deg);" alt="Python Logo"> -->
+                right style="--picture:url('./inspiration.jpeg');">
             <div class="wrapper">
                 <h6 class="white-text">WHO AM I YOU MAY ASK</h6>
                 <h3 class="gradient-text">I am Jarek Skwarczek</h3>
@@ -36,16 +59,16 @@
                     <div class="pin" style="--c1:#ff1111; --c2:#ff7300;">
                         <i class="fab fa-github"></i>Git</div>
                     <div class="pin" style="--c1:#002fff; --c2:#1875ff;">
-                        <img src="{% static './about/logos/vscode.svg' %}">VS Code
+                        <img src="./static/about/logos/vscode.svg' %}">VS Code
                     </div>
                     <div class="pin" style="--c1:#0084ff; --c2:#18ff52;">
-                        <img src="{% static './about/logos/pycharm.svg' %}" style="filter:invert(1); box-shadow: 0 1px 2px white;"><!-- PyCharm -->
+                        <img src="./static/about/logos/pycharm.svg" style="filter:invert(1); box-shadow: 0 1px 2px white;"><!-- PyCharm -->
                     </div>
                     <div class="pin" style="--c1:#0072a7; --c2:#4affa5;">
                         <i class="fa-solid fa-database"></i>SQL
                     </div>
                     <div class="pin" style="--c1:#800080; --c2:#ff4bff;">
-                        <img src="{% static './about/logos/django.svg' %}">Django
+                        <img src="./static/about/logos/django.svg">Django
                     </div>
                     <div class="pin" style="--c1:#ee5e0b; --c2:#ff8800;">
                         <i class="fa-brands fa-html5"></i>HTML/CSS
@@ -112,8 +135,37 @@
         </div>
 
     </div>
-{% endblock %}
 
-{% block scripts %}
-    <script type="text/javascript" src="{% static 'about/aboutscript.js'%}"></script>
-{% endblock %}
+    <footer id="bottom-bar">
+        <div class="last-wisper">
+            <h4>-- Contact Informations --</h4>
+            <p>Available at any time of the day. I prefer by email because it is more flexible.</p>
+        </div>
+        <div class="find-me">
+            <div>
+                <h4>Follow Me On:</h4>
+                <ul>
+                    <!-- <i class="fa-brands fa-square-github"></i> -->
+                    <li><a href="https://github.com/Ridgeso" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="https://www.codewars.com/users/Ridgeso" target="_blank"><img src="./static/codewars.svg"> CodeWars</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li><span>P: </span>123 456 789</li>
+                    <li><a href="mailto:jarskwarczek@gmail.com"><span>E: </span>jarskwarczek@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div id="scroll"><img src="./static/arrowup.png" alt="Scroll button"></div>
+
+    <script type="text/javascript" src="https://kit.fontawesome.com/3f7224d645.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./static/basescript.js"></script>
+    <script type="text/javascript" src="./static/about/aboutscript.js"></script>
+
+</body>
+</html>

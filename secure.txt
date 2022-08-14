@@ -1,3 +1,0 @@
-    superuser:
-login:    admin
-password: k

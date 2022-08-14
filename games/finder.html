@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl-PL en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <link rel="icon" href="../static/favicon.ico">
+    <link rel="stylesheet" href="../static/basestyle.css" type="text/css">
+    <link rel="stylesheet" href="../static/gamestyle.css" type="text/css">
+
+    <title>PathFinding</title>
+
+</head>
+<body>
+    <a id="logo" href="../index.html">
+        <img src="../static/person.svg">
+        <p>
+            <span class="name">JAREK SKWARCZEK</span>
+            <br>
+            <span class="footer">PROGRAMER</span>
+        </p>
+    </a>
+
+    <span class="open"  visible="true" ><small>Menu</small><i class="fa-solid fa-bars" ></i></span>
+    <span class="close" visible="false"><small>Close</small><i class="fa-solid fa-xmark"></i></span>
+    <ul id="top-bar" visible="false">
+        <li><a href="../about.html"><b>00 </b><span>About Me</span></a></li>
+        <li><a href="../projects.html"><b>01 </b><span>My Projects</span></a></li>
+        <li><a href="../contact.html"><b>02 </b><span>Contact</span></a></li>
+        <li><a href="https://github.com/Ridgeso" target="_blank"><b>03 </b><span>GitHub</span></a></li>
+    </ul>
+
+    <div class="window">
+        <canvas></canvas>
+        <script src="./canvas.js"></script>
+        <input type="range" id="speed" min="1" max="15" value="5"></input>
+        <input type="button" id="stop" value="Continue"></input>
+        <input type="button" id="reset" value="Reset"></input>
+        <script src="./finder/grid.js"></script>
+        <script src="./finder/finderscript.js"></script>
+    </div>
+
+
+    <footer id="bottom-bar">
+        <div class="last-wisper">
+            <h4>-- Contact Informations --</h4>
+            <p>Available at any time of the day. I prefer by email because it is more flexible.</p>
+        </div>
+        <div class="find-me">
+            <div>
+                <h4>Follow Me On:</h4>
+                <ul>
+                    <li><a href="https://github.com/Ridgeso" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="https://www.codewars.com/users/Ridgeso" target="_blank"><img src="../static/codewars.svg"> CodeWars</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li><span>P: </span>123 456 789</li>
+                    <li><a href="mailto:jarskwarczek@gmail.com"><span>E: </span>jarskwarczek@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div id="scroll"><img src="../static/arrowup.png" alt="Scroll button"></div>
+
+    <script type="text/javascript" src="https://kit.fontawesome.com/3f7224d645.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../static/basescript.js"></script>
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>

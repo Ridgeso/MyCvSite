@@ -1,21 +1,2 @@
-# init
-**/__init__.py
-
-# pycache
-**/__pycache__/
-
-# migrations
-**/migrations/
-
-# tests
-**/tests.py
-
-# env
-**/djangoenv
-
-# IDE
-/.idea
-
-#files
-/trash
 **/*.css.map
+trash
