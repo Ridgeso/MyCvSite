@@ -1,19 +1,28 @@
+function httpGet(theUrl) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
 window.addEventListener('load', () => {
     var [githubProjects, innerProjects] = document.getElementsByClassName('crawl');
 
     const fotCount = 4;
-    const projects = [
-        {"name": "Ridge1", "url": "#"},
-        {"name": "Ridge2", "url": "#"},
-        {"name": "Ridge3", "url": "#"}
-    ];
+
+    const url = "https://api.github.com/users/Ridgeso/repos"
+    var projects = httpGet(url);
+        projects = JSON.parse(projects);
     
     for (var i = 0; i < projects.length; i++) {
         let project = projects[i];
+        if (project['private'] || project['name'] === "Ridgeso")
+            continue;
+
         let carry = i % fotCount;
         let gitHubContent =
             `<li class="card" style="--picture:url('./back${carry}.jpg');">
-             <a href="${project['url']}" target="_blank">
+             <a href="${project['html_url']}" target="_blank">
                  <span class="button"><i class="fab fa-github"></i> GitHub</span>
                  <span class="name">${project['name']}</span>
              </a>

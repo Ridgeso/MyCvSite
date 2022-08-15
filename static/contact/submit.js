@@ -9,20 +9,20 @@ window.addEventListener("load", () => {
         var message = form.elements['message'].value;
         
         Email.send({
-            SecureToken: "",
+            SecureToken: "35f70289-e1c1-4d77-a8ce-72a7cdcbd8b5",
             To: "jarskwarczek@gmail.com",
             From: "jarskwarczek@gmail.com",
-            Subject: "[WORK]: "+title,
+            Subject: `[WORK]: ${title}`,
             Body: `${name} sends message\n${email} <- contact back\n\nMessage:\n${message}`
-        }).then()
+        }).then(message => alert(message))
         
         Email.send({
-            SecureToken: "",
+            SecureToken: "35f70289-e1c1-4d77-a8ce-72a7cdcbd8b5",
             To: email,
             From: "jarskwarczek@gmail.com",
             Subject: "Thanks for texting Me!",
             Body: `Hey ${name}\n\nI am so glad you wrote to me. I will send back as soon I read your message.\n\n Best Regards Jarosław Skwarczek`,
-        }).then()
+        }).then(message => alert(message))
     })
     
 });
